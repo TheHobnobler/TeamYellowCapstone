@@ -20,6 +20,8 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="FAQ.php">FAQ</a>
+      <li class="nav-item">
+        <a class="nav-link" href="retrievetime.php">Get Timestamp</a> 
       </li>
     </ul>
   </div>
