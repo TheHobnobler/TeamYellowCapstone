@@ -2,7 +2,7 @@
 <html>
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<title>Index</title>
+<title>Hello World</title>
 </head>
 <body>
 
