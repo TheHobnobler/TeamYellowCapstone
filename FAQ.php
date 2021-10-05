@@ -47,6 +47,11 @@
     <p>I can't find the location?&emsp;No worries we are a bit hard to find. We are located in your local mall area next to the fountain!</p>
     <p>Also feel free to reach out towards our customer support email for any additional questions at coffee@loveyoualatte.com</p>
   <p>Store Hours: M-F 10AM-9PM, Saturday: 11AM-2AM, Sunday: 10AM-8PM </p>
+  
+  <h3>Local Suppliers</h3>
+    <p>Random local cup supply company <br> contact phone number 614-111-1111</p>
+    <p>Place holder plate company <br> contact phone number 614-111-1112</p>
+    <p>Another local rubber mat supply <br> contact phone number 614-111-1113</p>
 </div>
 
 </body>
