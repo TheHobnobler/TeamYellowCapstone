@@ -23,6 +23,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="retrievetime.php">Get Timestamp</a>
+      </li>  
     </ul>
   </div>
 </nav>
