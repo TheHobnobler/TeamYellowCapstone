@@ -1,7 +1,7 @@
 <?php
 include 'Functions.php';
 ?>
-<?=template_header('Hello World')?>
+<?=navbar('Hello World')?>
 
 <div class="container pt-5">
     <h3 style="color: red;">Hello World from</h3>
