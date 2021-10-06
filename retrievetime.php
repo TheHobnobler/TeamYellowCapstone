@@ -2,11 +2,6 @@
 include 'functions.php';
 ?>
 <?=navbar('Retrieve the Time')?>
-    
-<?php
-include 'functions.php';
-?>
-<?=navbar()?>
 
 <div class="container pt-5">
     <h3 style="color: red;">Time Retrieval Tool</h3>
