@@ -1,16 +1,7 @@
-    <!DOCTYPE html>
-<html>
-<head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-<title>FAQ</title>
-</head>
-<body>
-  
 <?php
-include 'functions.php';
+include 'Functions.php';
 ?>
-<?=navbar()?>
+<?=navbar('FAQ')?>
 
 <div class="container">
   
@@ -19,7 +10,6 @@ include 'functions.php';
   <p>We are the oldest coffee house in the city of Columbus State. We started in Leipzig, Germany.<br>
     Our first cup was poured in Europe in 1711 and it has not stopped since.<br>
     The NEICE of the owner came to America in 1816. she settled in Ohio and opened up Love you a latte.</p>
-
 <p>We use the original recipes from the original coffee house in Germany with a twist of brews that are popular today.<br>
   There is no better tasting coffee than our brew. nobody can say that they started their first brew in 1711.<br> 
   Our coffee is imported from Germany. you cannot have this unique and wonderful tasting coffee any elsewhere in the U.S. It is pure love with a little latte.
@@ -37,6 +27,5 @@ include 'functions.php';
     <p>Place holder plate company <br> contact phone number 614-111-1112</p>
     <p>Another local rubber mat supply <br> contact phone number 614-111-1113</p>
 </div>
-
 </body>
 </html>
