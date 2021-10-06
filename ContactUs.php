@@ -1,7 +1,7 @@
 <?php
 include 'Functions.php';
 ?>
-<?=template_header('Contact Us')?>
+<?=navbar('Contact Us')?>
 
 <div class="container">
     <h1>Contact Us</h1>
