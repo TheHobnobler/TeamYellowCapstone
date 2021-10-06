@@ -1,5 +1,5 @@
 <?php
-include 'functions.php';
+include 'Functions.php';
 ?>
 <?=navbar('Retrieve the Time')?>
 
