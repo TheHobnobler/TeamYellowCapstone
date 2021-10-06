@@ -1,16 +1,7 @@
-    <!DOCTYPE html>
-<html>
-<head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-<title>Hello World</title>
-</head>
-<body>
-    
 <?php
-include 'functions.php';
+include 'Functions.php';
 ?>
-<?=navbar()?>
+<?=template_header('Hello World')?>
 
 <div class="container pt-5">
     <h3 style="color: red;">Hello World from</h3>
