@@ -35,7 +35,7 @@ function createMenuTable($array){
 <?php
 
 if(isset($_POST['addToCart'])) {
-            echo $coffee[0];
+            print_r($coffee);
         }
 
 ?>
