@@ -8,7 +8,7 @@ include 'Functions.php';
 
 <?php
 function addToCart(){
-
+    
 }
 
 $coffee = array (
