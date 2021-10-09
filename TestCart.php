@@ -21,7 +21,7 @@ function createMenuTable($array){
         "<tr><td>".$array[$i][0].":&emsp;&emsp;</td><td> Size:&emsp;".$array[$i][1]."&emsp;&emsp;</td><td> Price:&emsp;$".$array[$i][2]."<br></td>
             <td>
                 <form id='frm' method='post'  action='?action' >
-                    <input type='submit' value='Add to cart' id='Sumbit'  />
+                    <input type='submit' value='Add to cart' id='Submit'  />
                 </form>
             </td>
         </tr>";
