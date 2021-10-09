@@ -35,7 +35,7 @@ function createMenuTable($array){
 <?php
 
 if(isset($_POST['addToCart'])) {
-            echo "This is add to cart that is selected";
+            echo $array[$i][2};
         }
 
 ?>
