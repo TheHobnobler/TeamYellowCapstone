@@ -32,6 +32,14 @@ function createMenuTable($array){
 }
 ?>
 
+<?php
+
+if(isset($_POST['addToCart'])) {
+            echo "This is add to cart that is selected";
+        }
+
+?>
+
 <div class="container">
     <h1>Welcome to Love You a Latte</h1>
     <p>This is a work in progress for a home landing page.</p>
