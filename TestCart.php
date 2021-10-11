@@ -67,9 +67,9 @@ $cart = array(array("","",""));
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
   <div class="offcanvas-body">
-    <p>Some text lorem ipsum.</p>
-    <p>Some text lorem ipsum.</p>
-    <p>Some text lorem ipsum.</p>
+    <?php
+    echo $shopcart[0][2];
+     ?>
     <button class="btn btn-secondary" type="button">A Button</button>
   </div>
 </div>
