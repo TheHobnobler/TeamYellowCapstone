@@ -19,21 +19,19 @@ function navbar($title) {
       <li class="nav-item">
         <a class="nav-link" href="HomePage.php">Home</a>
       </li>
-     <li class="nav-item">
-        <a class="nav-link" href="HelloWorld.php">Hello World</a>
-      </li>
       <li class="nav-item">
-        <a class="nav-link" href="ContactUs.php">Contact Us</a>
+        <a class="nav-link" href="TestCart.php">Menu</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="FAQ.php">FAQ</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="retrievetime.php">Get Timestamp</a>
+        <a class="nav-link" href="ContactUs.php">Contact Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="TestCart.php">Menu</a>
+        <a class="nav-link" href="retrievetime.php">Get Timestamp</a>
       </li>
+      
     </ul>
   </div>
 </nav>
