@@ -96,7 +96,7 @@ $_SESSION["coffee"] = array (
 
 
 
-      <footer>
+<!--      <footer>
         <style>
             p2 {background-color: azure;
                 position: fixed;
@@ -107,6 +107,7 @@ $_SESSION["coffee"] = array (
         <p2>Contact us!<br>
             <a href="coffee@loveyoualatte.com">yo email me here!</a></p2>
     </footer>
+-->
 </html>
 
 
