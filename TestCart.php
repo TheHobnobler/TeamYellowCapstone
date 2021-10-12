@@ -74,7 +74,7 @@ $_SESSION["coffee"] = array (
   <label for="fname">Receipt number:</label>
   <input type="text" id="receiptBox" name="fname" onkeyup ="getCookie(this.value)"></input>
 </form>
-<span id="previousOrder"></span>
+<p><span id="previousOrder"></span></p>
 
 </div>
 
