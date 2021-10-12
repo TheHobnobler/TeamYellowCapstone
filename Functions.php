@@ -1,14 +1,18 @@
 <?php
 
+
 function navbar($title) {
     echo <<<EOT
-    <html>
+    <!DOCTYPE html>
+<html>
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="jquery-3.5.1.min.js"></script>
 <title>$title</title>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <ul class="navbar-nav">
@@ -36,4 +40,25 @@ function navbar($title) {
 EOT;
 }
 
-?>
+function createMenuTable($array){
+    for($i=0; $i <count($array); $i++){
+        echo  
+        "<tr><td>".$array[$i][0].":&emsp;&emsp;</td><td> Size:&emsp;".$array[$i][1]."&emsp;&emsp;</td><td> Price:&emsp;$".$array[$i][2]."&emsp;<br></td>
+            <td>
+            <form action=''>
+            <label for='fname'></label>
+            <input type='button' value ='Add To Cart' id='' name='".$array[$i][0].",".$array[$i][1].",".$array[$i][2]."' onclick='showHint(this.name)'>
+          </form>
+
+            </td>
+        </tr>";
+    }
+}
+
+
+
+
+
+      
+
+
