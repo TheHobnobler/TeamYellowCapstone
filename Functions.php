@@ -47,7 +47,7 @@ function createMenuTable($array){
             <td>
             <form action=''>
             <label for='fname'></label>
-            <input type='button' value ='Add To Cart' id='' name='".$array[$i][0].",".$array[$i][1].",".$array[$i][2]."' onclick='showHint(this.name)'>
+            <input type='button' value ='Add To Cart' id='' name='".$array[$i][0].",".$array[$i][1].",".$array[$i][2]."' onclick='getButtonName(this.name)'>
           </form>
 
             </td>
