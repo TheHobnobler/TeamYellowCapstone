@@ -10,7 +10,7 @@ function getButtonName(str) {
   }
 
 
-  
+
   function clearCart(str) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -21,3 +21,41 @@ function getButtonName(str) {
     xmlhttp.open("GET", "clearCart.php?q=" + str, true);
     xmlhttp.send();
   }
+
+
+  function createReceipt(str) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("checkout").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "createReceipt.php?q=" + str, true);
+    xmlhttp.send();
+  }
+
+
+  function createCookie(str) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("checkout").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "createCookie.php?q=" + str, true);
+    xmlhttp.send();
+  }
+
+
+  function getCookie(str) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("previousOrder").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "getCookie.php?q=" + str, true);
+    xmlhttp.send();
+  }
+
+
