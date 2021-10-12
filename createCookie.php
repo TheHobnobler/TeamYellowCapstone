@@ -4,7 +4,7 @@ $q = $_REQUEST["q"];
 
 
 
-$cookie_name = "9";//rand(1,1000);
+$cookie_name = rand(1,1000);
 $cookie_value = $q;
 setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 
