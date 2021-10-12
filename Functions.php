@@ -32,7 +32,7 @@ function navbar($title) {
         <a class="nav-link" href="retrievetime.php">Get Timestamp</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="TestCart.php">Test Cart</a>
+        <a class="nav-link" href="TestCart.php">Menu</a>
       </li>
     </ul>
   </div>
