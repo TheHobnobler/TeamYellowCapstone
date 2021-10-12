@@ -31,7 +31,7 @@ var coffee = [
 ];
 
 
-function showHint(str) {
+function getButtonName(str) {
   if (str.length == 0) {
     document.getElementById("txtHint").innerHTML = "";
     return;
