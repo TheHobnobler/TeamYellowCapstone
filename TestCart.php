@@ -1,46 +1,52 @@
+
 <?php
-
-session_start();
-
 include 'Functions.php';
+session_start();
 ?>
+
+
+
 <?=navbar('Test Cart')?>
 
 <?php
-function addToCart(){
-    
-}
 
-$coffee = array (
-    array("Caramel Macchiato","small",2),array("Caramel Macchiato","medium",3),array("Caramel Macchiato","large",5),
-    array("Vanilla Latte","small",2),array("Vanilla Latte","medium",3), array("Vanilla Latte","large",5),
-    array("Pumkin Spice Latte","small",2),array("Pumkin Spice Latte","medium",3),array("Pumkin Spice Latte","large",5),
-    array("Black Coffee","small",2),array("Black Coffee","medium",3),array("Black Coffee","Large",5)
+
+$_SESSION["cart"] = array(array("foo","foo","foo"));
+
+$_SESSION["coffee"] = array (
+    array("Caramel Macchiato","Small",2),array("Caramel Macchiato","Medium",3),array("Caramel Macchiato","Large",5),
+    array("Vanilla Latte","Small",2),array("Vanilla Latte","Medium",3), array("Vanilla Latte","Large",5),
+    array("Pumkin Spice Latte","Small",2),array("Pumkin Spice Latte","Medium",3),array("Pumkin Spice Latte","Large",5),
+    array("Black Coffee","Small",2),array("Black Coffee","Medium",3),array("Black Coffee","Large",5)
   );
 
-function createMenuTable($array){
-    for($i=0; $i <count($array); $i++){
-        echo  
-        "<tr><td>".$array[$i][0].":&emsp;&emsp;</td><td> Size:&emsp;".$array[$i][1]."&emsp;&emsp;</td><td> Price:&emsp;$".$array[$i][2]."<br></td>
-            <td>
-                <form id='frm' method='post'  action='?action' >
-                    <input type='submit' name='addToCart' value='Add to cart' id='Submit'  />
-                </form>
-            </td>
-        </tr>";
-    }
+?>
+
+<script>
+var coffee = [
+    ["Caramel Macchiato","Small",2],["Caramel Macchiato","Medium",3],["Caramel Macchiato","Large",5],
+    ["Vanilla Latte","Small",2],["Vanilla Latte","Medium",3],["Vanilla Latte","Large",5],
+    ["Pumkin Spice Latte","Small",2],["Pumkin Spice Latte","Medium",3],["Pumkin Spice Latte","Large",5],
+    ["Black Coffee","Small",2],["Black Coffee","Medium",3],["Black Coffee","Large",5]
+];
+
+
+function showHint(str) {
+  if (str.length == 0) {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("cart").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "addToCart.php?q=" + str, true);
+    xmlhttp.send();
+  }
 }
-?>
-
-<?php
-
-if(isset($_POST['addToCart'])) {
-            
-            $shopcart = array($coffee[0],$coffee[2]);
-            echo $shopcart[0][2];
-        }
-
-?>
+</script>
 
 <div class="container">
     <h1>Welcome to Love You a Latte</h1>
@@ -49,27 +55,24 @@ if(isset($_POST['addToCart'])) {
 
 <div class="container">
     <h1>Menu</h1>
-<?php
-$cart = array(array("","",""));
-
-
-?>
  
  <table>
-     <?=createMenuTable($coffee)?>
+     <?=createMenuTable($_SESSION["coffee"])?>
 </table>
+
+<p>Suggestions: <span id="txtHint"></span></p>
 
 </div>
 
 <div class="offcanvas offcanvas-end" id="demo">
   <div class="offcanvas-header">
-    <h1 class="offcanvas-title">Test Cart</h1>
+    <h1 class="offcanvas-title">Your Cart</h1>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
   <div class="offcanvas-body">
-    <p>Some text lorem ipsum.</p>
-    <p>Some text lorem ipsum.</p>
-    <p>Some text lorem ipsum.</p>
+  <h1></h1>  
+  <p id="cart"></p>
+
     <button class="btn btn-secondary" type="button">A Button</button>
   </div>
 </div>
@@ -85,6 +88,18 @@ $cart = array(array("","",""));
 </body>
 
 
+
+      <footer>
+        <style>
+            p2 {background-color: azure;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+        </style>
+        <p2>Contact us!<br>
+            <a href="coffee@loveyoualatte.com">yo email me here!</a></p2>
+    </footer>
 </html>
 
 
