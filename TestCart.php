@@ -23,6 +23,14 @@ $_SESSION["coffee"] = array (
 ?>
 
 <script>
+var coffee = [
+    ["Caramel Macchiato","Small",2],["Caramel Macchiato","Medium",3],["Caramel Macchiato","Large",5],
+    ["Vanilla Latte","Small",2],["Vanilla Latte","Medium",3],["Vanilla Latte","Large",5],
+    ["Pumkin Spice Latte","Small",2],["Pumkin Spice Latte","Medium",3],["Pumkin Spice Latte","Large",5],
+    ["Black Coffee","Small",2],["Black Coffee","Medium",3],["Black Coffee","Large",5]
+];
+
+
 function getButtonName(str) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -31,6 +39,17 @@ function getButtonName(str) {
       }
     };
     xmlhttp.open("GET", "addToCart.php?q=" + str, true);
+    xmlhttp.send();
+  }
+
+  function clearCart(str) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("cart").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "clearCart.php?q=" + str, true);
     xmlhttp.send();
   }
 </script>
@@ -57,7 +76,10 @@ function getButtonName(str) {
   <h1></h1>  
   <p id="cart"></p>
 
-    <button class="btn btn-secondary" type="button">A Button</button>
+  <form action=''>
+            <label for='fname'></label>
+            <input name="foo" type='button' value ='Clear Cart' id=''  onclick='clearCart(this.name)'>
+          </form>
   </div>
 </div>
 
@@ -67,6 +89,7 @@ function getButtonName(str) {
   <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
     Toggle Your Cart
   </button>
+  
 </div>
 
 </body>
