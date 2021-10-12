@@ -6,7 +6,7 @@ session_start();
 
 
 
-<?=navbar('Test Cart')?>
+<?=navbar('Menu')?>
 
 <?php
 
@@ -50,7 +50,6 @@ function showHint(str) {
 
 <div class="container">
     <h1>Welcome to Love You a Latte</h1>
-    <p>This is a work in progress for a home landing page.</p>
 </div>
 
 <div class="container">
@@ -59,8 +58,6 @@ function showHint(str) {
  <table>
      <?=createMenuTable($_SESSION["coffee"])?>
 </table>
-
-<p>Suggestions: <span id="txtHint"></span></p>
 
 </div>
 
@@ -81,7 +78,7 @@ function showHint(str) {
   <h3>Take a look at your cart</h3>
   <p>Just click the button below!</p>
   <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
-    Toggle Test Cart
+    Toggle Your Cart
   </button>
 </div>
 
