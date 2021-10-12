@@ -47,9 +47,7 @@ function getButtonName(str) {
   }
 </script>
 
-<div class="container">
-    <h1>Welcome to Love You a Latte</h1>
-</div>
+
 
 <div class="container">
     <h1>Menu</h1>
