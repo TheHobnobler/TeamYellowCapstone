@@ -23,19 +23,7 @@ $_SESSION["coffee"] = array (
 ?>
 
 <script>
-var coffee = [
-    ["Caramel Macchiato","Small",2],["Caramel Macchiato","Medium",3],["Caramel Macchiato","Large",5],
-    ["Vanilla Latte","Small",2],["Vanilla Latte","Medium",3],["Vanilla Latte","Large",5],
-    ["Pumkin Spice Latte","Small",2],["Pumkin Spice Latte","Medium",3],["Pumkin Spice Latte","Large",5],
-    ["Black Coffee","Small",2],["Black Coffee","Medium",3],["Black Coffee","Large",5]
-];
-
-
 function getButtonName(str) {
-  if (str.length == 0) {
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  } else {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -45,7 +33,6 @@ function getButtonName(str) {
     xmlhttp.open("GET", "addToCart.php?q=" + str, true);
     xmlhttp.send();
   }
-}
 </script>
 
 <div class="container">
