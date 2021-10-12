@@ -11,6 +11,8 @@ session_start();
 <?php
 
 
+
+
 $_SESSION["cart"] = array(array("foo","foo","foo"));
 
 $_SESSION["coffee"] = array (
@@ -22,33 +24,6 @@ $_SESSION["coffee"] = array (
 
 ?>
 
-<script>
-
-function getButtonName(str) {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("cart").innerHTML = this.responseText;
-      }
-    };
-    xmlhttp.open("GET", "addToCart.php?q=" + str, true);
-    xmlhttp.send();
-  }
-
-  function clearCart(str) {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("cart").innerHTML = this.responseText;
-      }
-    };
-    xmlhttp.open("GET", "clearCart.php?q=" + str, true);
-    xmlhttp.send();
-  }
-</script>
-
-
-
 <div class="container">
     <h1>Menu</h1>
  
@@ -58,7 +33,7 @@ function getButtonName(str) {
 
 </div>
 
-<div class="offcanvas offcanvas-end" id="demo">
+<div class="offcanvas offcanvas-end" id="right">
   <div class="offcanvas-header">
     <h1 class="offcanvas-title">Your Cart</h1>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -66,6 +41,15 @@ function getButtonName(str) {
   <div class="offcanvas-body">
   <h1></h1>  
   <p id="cart"></p>
+
+  <div class="container-fluid mt-3">
+  <h3>Checkout</h3>
+  <p>Click below to checkout and confirm order</p>
+  <button class="btn btn-primary" onclick="createReceipt(this.name)" name="foo" type="button" data-bs-toggle="offcanvas" data-bs-target="#top">
+    Checkout
+  </button>
+  <br></br>
+  </div>
 
   <form action=''>
             <label for='fname'></label>
@@ -77,11 +61,36 @@ function getButtonName(str) {
 <div class="container-fluid mt-3">
   <h3>Take a look at your cart</h3>
   <p>Just click the button below!</p>
-  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#right">
     Toggle Your Cart
   </button>
   
 </div>
+
+<div>
+    <br></br>
+<p><b>Enter receipt number below to check a previous order.</b></p>
+<form action="">
+  <label for="fname">Receipt number:</label>
+  <input type="text" id="receiptBox" name="fname" onkeyup ="getCookie(this.value)"></input>
+</form>
+<span id="previousOrder"></span>
+
+</div>
+
+<div class="offcanvas offcanvas-top" id="top">
+  <div class="offcanvas-header">
+    <h1 class="offcanvas-title">Are you sure?</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p id="checkout">Send receipt information here</p>
+    <button class="btn btn-secondary" name = "foo" onclick = "createCookie( document.getElementById('checkout').innerHTML)" type="button">Finish Order</button>
+  </div>
+</div>
+
+
+
 
 </body>
 
