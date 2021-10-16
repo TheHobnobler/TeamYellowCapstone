@@ -16,10 +16,10 @@ session_start();
 $_SESSION["cart"] = array(array("foo","foo","foo"));
 
 $_SESSION["coffee"] = array (
-    array("Caramel Macchiato: a layer of steamed milk, topped with two shots of espresso, then finished with milk foam and a caramel drizzle","Small",2),array("Caramel Macchiato","Medium",3),array("Caramel Macchiato","Large",5),
-    array("Vanilla Latte: full-bodied espresso, creamy steamed milk and classic vanilla syrup","Small",2),array("Vanilla Latte","Medium",3), array("Vanilla Latte","Large",5),
-    array("Pumkin Spice Latte: a mix of traditional autumn spice flavors (cinnamon, nutmeg, and clove), steamed milk, espresso, and often sugar, topped with whipped cream and pumpkin pie spice","Small",2),array("Pumkin Spice Latte","Medium",3),array("Pumkin Spice Latte","Large",5),
-    array("Black Coffee: well-rounded blend of Latin American coffees with subtly rich flavors of chocolate and toasted nuts","Small",2),array("Black Coffee","Medium",3),array("Black Coffee","Large",5)
+    array("Caramel Macchiato: ","Small",2),array("Caramel Macchiato","Medium",3),array("Caramel Macchiato","Large",5),
+    array("Vanilla Latte: ","Small",2),array("Vanilla Latte","Medium",3), array("Vanilla Latte","Large",5),
+    array("Pumkin Spice Latte:","Small",2),array("Pumkin Spice Latte","Medium",3),array("Pumkin Spice Latte","Large",5),
+    array("Black Coffee: ","Small",2),array("Black Coffee","Medium",3),array("Black Coffee","Large",5)
   );
 
 ?>
