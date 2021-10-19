@@ -13,13 +13,22 @@ session_start();
 
 
 
-$_SESSION["cart"] = array(array("foo","foo","foo"));
+
+$_SESSION["cart"] = array();
 
 $_SESSION["coffee"] = array (
-    array("Caramel Macchiato: ","Small",2),array("Caramel Macchiato","Medium",3),array("Caramel Macchiato","Large",5),
-    array("Vanilla Latte: ","Small",2),array("Vanilla Latte","Medium",3), array("Vanilla Latte","Large",5),
-    array("Pumkin Spice Latte:","Small",2),array("Pumkin Spice Latte","Medium",3),array("Pumkin Spice Latte","Large",5),
-    array("Black Coffee: ","Small",2),array("Black Coffee","Medium",3),array("Black Coffee","Large",5)
+    "scm"=> array("item" => "Caramel Macchiato","size" => "Small","cost" => 2,"lid" =>"scm" , "desc" => "Freshly steamed milk with vanilla-flavored syrup with espresso and topped with a caramel drizzle."),
+    "mcm"=>array("item" => "Caramel Macchiato","size" => "Medium","cost" => 3,"lid" =>"mcm", "desc" => "Freshly steamed milk with vanilla-flavored syrup with espresso and topped with a caramel drizzle."),
+    "lcm"=>array("item" => "Caramel Macchiato","size" => "Large","cost" => 5,"lid" =>"lcm" , "desc" => "Freshly steamed milk with vanilla-flavored syrup with espresso and topped with a caramel drizzle."),
+    "svl"=> array("item" => "Vanilla Latte","size" => "Small","cost" => 2, "lid" =>"svl" ,"desc" => "Espresso, steamed milk and vanilla syrup and espresso."),
+    "mvl"=>array("item" => "Vanilla Latte","size" => "Medium","cost" => 3, "lid" =>"mvl" ,"desc" => "Espresso, steamed milk and vanilla syrup and espresso."), 
+    "lvl"=>array("item" => "Vanilla Latte","size" => "Large","cost" => 5, "lid" =>"lvl" ,"desc" => "Espresso, steamed milk and vanilla syrup and espresso."),
+    "spsl"=>array("item" => "Pumkin Spice Latte","size" => "Small","cost" =>2,"lid" => "spsl" ,"desc" => "Flavors of pumpkin, cinnamon, nutmeg and clove—topped with whipped cream and pumpkin pie spices."),
+    "mpsl"=>array("item" => "Pumkin Spice Latte","size" => "Medium","cost" =>3,"lid" => "mpsl" ,"desc" => "Flavors of pumpkin, cinnamon, nutmeg and clove—topped with whipped cream and pumpkin pie spices."),
+    "lpsl"=>array("item" => "Pumkin Spice Latte","size" => "Large","cost" =>5,"lid" => "lpsl" ,"desc" => "Flavors of pumpkin, cinnamon, nutmeg and clove—topped with whipped cream and pumpkin pie spices."),
+    "sbc"=>array("item" => "Black Coffee","size" => "Small","cost" => 2,"lid" => "sbc" ,"desc" => "Fresh ground French press coffee beans."),
+    "mbc"=>array("item" => "Black Coffee","size" => "Medium","cost" => 3,"lid" => "mbc" ,"desc" => "Fresh ground French press coffee beans."),
+    "lbc"=>array("item" => "Black Coffee","size" => "Large","cost" => 5,"lid" => "lbc" ,"desc" => "Fresh ground French press coffee beans.")
   );
 
 ?>
@@ -33,7 +42,7 @@ $_SESSION["coffee"] = array (
 
 </div>
 
-<div class="offcanvas offcanvas-end" id="right">
+<div class="offcanvas offcanvas-end " id="right">
   <div class="offcanvas-header">
     <h1 class="offcanvas-title">Your Cart</h1>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -78,7 +87,7 @@ $_SESSION["coffee"] = array (
 
 </div>
 
-<div class="offcanvas offcanvas-top" id="top">
+<div class="offcanvas offcanvas-top h-50" id="top">
   <div class="offcanvas-header">
     <h1 class="offcanvas-title">Are you sure?</h1>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -93,21 +102,6 @@ $_SESSION["coffee"] = array (
 
 
 </body>
-
-
-
-<!--      <footer>
-        <style>
-            p2 {background-color: azure;
-                position: fixed;
-                width: 100%;
-                bottom: 0;
-            }
-        </style>
-        <p2>Contact us!<br>
-            <a href="coffee@loveyoualatte.com">yo email me here!</a></p2>
-    </footer>
--->
 </html>
 
 
