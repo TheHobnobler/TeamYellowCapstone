@@ -89,7 +89,7 @@ $_SESSION["coffee"] = array (
 
 <div class="offcanvas offcanvas-top h-50" id="top">
   <div class="offcanvas-header">
-    <h1 class="offcanvas-title">Are you sure?</h1>
+    <h1>Are you sure?</h1>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
   <div class="offcanvas-body">
