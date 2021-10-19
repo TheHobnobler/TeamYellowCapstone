@@ -6,18 +6,50 @@ session_start();
 $q = $_REQUEST["q"];
 $total = 0;
 
-array_push($_SESSION["cart"],explode(",",$q));
 
-for($i=1; $i <count($_SESSION["cart"]); $i++){
-  $total += $_SESSION["cart"][$i][2];
+$found =false;
+
+
+foreach($_SESSION["cart"] as &$value){
+  if($value["id"]== $q){
+    $value["qty"] +=1;
+    $found =true;
+    break;
+  }
 }
 
-$count =  count($_SESSION["cart"])-1;
-for($i=1; $i < count($_SESSION["cart"]); $i++){
-  echo 
-  "<br>" .$_SESSION["cart"][$i][1]. " " .$_SESSION["cart"][$i][0]. " for : $" .$_SESSION["cart"][$i][2]. "</br>";
+if($found== false){
+  $_SESSION["cart"][] =array("id"=>$q,"qty"=>1);
 }
+$count =0;
+
+foreach($_SESSION["cart"] as &$value){
+  $count += $value["qty"];
+}
+
+echo "<table>";
+foreach($_SESSION["cart"] as &$value){
+  $subtotal = ($value["qty"] * $_SESSION["coffee"][$value["id"]]["cost"]);
+
+  if($value["qty"] > 0){
+ echo "<tr><td> {$_SESSION["coffee"][$value["id"]]["size"]}  {$_SESSION["coffee"][$value["id"]]["item"]} x{$value["qty"]} $".$subtotal. "</td>
+            <td>
+            <form action=''>
+            <label for='fname'></label>
+            <input type='button' value ='Remove Item' id='' name='".$value["id"]."' onclick='removeItem(this.name)'>
+          </form>
+
+            </td>
+        </tr>";
+
+        $total += $subtotal;
+}
+}
+echo "</table>";
 
 echo "<h4>You have {$count} item(s) in your cart.</h4><h4>Total $ {$total}";
+
+
+
 
 ?>
