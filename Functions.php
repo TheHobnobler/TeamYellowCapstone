@@ -9,7 +9,7 @@ function navbar($title) {
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="jquery-3.5.1.min.js"></script>
-<script type="text/javascript" src="javaScript.js"></script>
+<script type="text/javascript" src="java.js"></script>
 <title>$title</title>
 </head>
 <body>
@@ -39,18 +39,32 @@ function navbar($title) {
 EOT;
 }
 
+
 function createMenuTable($array){
-    for($i=0; $i <count($array); $i++){
-        echo  
-        "<tr><td>".$array[$i][0].":&emsp;&emsp;</td><td> Size:&emsp;".$array[$i][1]."&emsp;&emsp;</td><td> Price:&emsp;$".$array[$i][2]."&emsp;<br></td>
+  $count = 0;
+    foreach($_SESSION["coffee"] as $value){
+        
+      if(($count%3) == 0){
+        echo "<tr><td>Description:</td><td>" .$value["desc"]. "";
+      }
+      
+      echo  
+        "<tr><td>".$value["item"].":&emsp;&emsp;</td><td> Size:&emsp;".$value["size"]."&emsp;&emsp;</td><td> Price:&emsp;$".$value["cost"]."&emsp;</td>
             <td>
             <form action=''>
             <label for='fname'></label>
-            <input type='button' value ='Add To Cart' id='' name='".$array[$i][0].",".$array[$i][1].",".$array[$i][2]."' onclick='getButtonName(this.name)'>
+            <input type='button' value ='Add To Cart' id='' name='".$value["lid"]."' onclick='getButtonName(this.name)'>
           </form>
 
             </td>
         </tr>";
+
+        if(($count%3) == 2){
+          echo "<tr><td>&emsp;</td><td></td></tr>";
+        }
+       
+          $count++;
+     
     }
 }
 
