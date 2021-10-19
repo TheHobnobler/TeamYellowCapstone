@@ -42,7 +42,7 @@ $_SESSION["coffee"] = array (
 
 </div>
 
-<div class="offcanvas offcanvas-end " id="right">
+<div class="offcanvas offcanvas-end w-50" id="right">
   <div class="offcanvas-header">
     <h1 class="offcanvas-title">Your Cart</h1>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
