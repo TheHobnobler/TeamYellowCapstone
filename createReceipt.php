@@ -3,16 +3,25 @@ session_start();
 
 $total = 0;
 
-for($i=1; $i <count($_SESSION["cart"]); $i++){
-    $total += $_SESSION["cart"][$i][2];
-  }
 
-echo "You ordered ";
 
-for($i=1; $i < count($_SESSION["cart"]); $i++){
-    echo "" .$_SESSION["cart"][$i][1]. " " .$_SESSION["cart"][$i][0]. ", ";
+
+$count =0;
+
+foreach($_SESSION["cart"] as &$value){
+  $count += $value["qty"];
 }
 
-echo"<br>For a total of $" .$total. "</br>";
+echo "<table>";
+foreach($_SESSION["cart"] as &$value){
+  $subtotal = ($value["qty"] * $_SESSION["coffee"][$value["id"]]["cost"]);
 
+  if($value["qty"] > 0){
+ echo "<tr><td> {$_SESSION["coffee"][$value["id"]]["size"]}  {$_SESSION["coffee"][$value["id"]]["item"]} x{$value["qty"]} $".$subtotal. "</td></tr>";
+        $total += $subtotal;
+}
+}
+echo "</table>";
+
+echo "<h4>You have a total of {$count} items.</h4><h4>Total $ {$total}";
 ?>
