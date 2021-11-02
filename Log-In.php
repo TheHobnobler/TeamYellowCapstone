@@ -23,6 +23,7 @@ include 'Functions.php';
              <input type="password" name="password" placeholder="Enter your Passsword">
         </div>
         
+        <input type="submit" type="submit" value="LOGIN" class="btn-login">
         
     </form>
     
