@@ -36,7 +36,7 @@ include 'Functions.php';
 <?php 
 
 $servername = "localhost";
-$username = "root";
+$username = "rot";
 $password = "teamyellow";
 $db = "coffee_emps";
 
