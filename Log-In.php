@@ -4,7 +4,7 @@
  </head>
  <body>
 
-<?php
+<!-- <?php
 include 'Functions.php';
 ?>
 <?=navbar('Hello World')?>
@@ -29,7 +29,7 @@ include 'Functions.php';
     
 
 
-<?php 
+<?php -->
 
 $servername = "localhost";
 $username = "root";
@@ -38,8 +38,8 @@ $db = "coffee_emps";
 
 $conn = mysqli_connect($servername, $username, $password, $db);
 
- if  (!$conn) { die("Connect failed: ".mysqli_connect_error()); }
-echo "Connect success"; 
+ <!-- if  (!$conn) { die("Connect failed: ".mysqli_connect_error()); }
+echo "Connect success"; -->
 
 
 
