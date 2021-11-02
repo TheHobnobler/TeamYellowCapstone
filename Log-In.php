@@ -35,8 +35,8 @@ include 'Functions.php';
 
 <?php 
 
-$host="localhost";
-$user="root";
+$host="";
+$user="";
 $password="";
 $db="";
 
