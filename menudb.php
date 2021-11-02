@@ -24,21 +24,14 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 $sql_retrieve = "SELECT * FROM menu_tbl";
 $result = mysqli_query($conn, $sql_retrieve);
     
-if ($result = $mysqli->query($sql_retrieve)) {
-
-    while ($row = $result->fetch_assoc()) {
-        $SKU = $row["col1"];
-        $ITEM = $row["col2"];
-        $DESCRIPTION = $row["col3"];
-        $PRICE = $row["col4"];
-        $SIZE = $row["col5"];
-
-        echo $SKU;
-        echo $ITEM;
-        echo $DESCRIPTION;
-        echo $PRICE;
-        echo $SIZE;
-    }
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "SKU: " . $row["SKU"]. " - Name: " . $row["ITEM"]. " Size: " . $row["SIZE"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
 
 
 mysqli_close($conn);
