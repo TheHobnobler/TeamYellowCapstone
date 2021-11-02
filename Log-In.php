@@ -43,6 +43,7 @@ echo "Connect success";
 
 $sql_retrieve = "SELECT * FROM loginfrom";
 $result = mysqli_query($conn, $sql_retrieve);
+echo $result;
 
 $sql = "SELECT Pass FROM loginfrom WHERE User='Admin'";
 $test = mysqli_query($conn, $sql);
