@@ -15,7 +15,7 @@ include 'Functions.php';
     
 <body> 
     
-    <form>
+    <formmethod="post" action="#">
         <div class="form-input">
             <input type="text" name="username" placeholder="Enter your User Name">
         </div>
