@@ -40,14 +40,15 @@ $conn = new mysqli($servername, $username, $password, $db);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 } 
+  
+ $sql = "SHOW DATABASES";
+$result = $conn->query($sql);
+echo $result;
 
 
 
 
 
-$sql = "SHOW DATABASES";
-$test = mysqli_query($conn, $sql);
-echo $test;
   
  if(isset($_POST['username'])){
     
