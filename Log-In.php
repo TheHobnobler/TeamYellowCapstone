@@ -47,7 +47,7 @@ echo $result;
 
 $sql = "SELECT Pass FROM loginfrom WHERE User='Admin'";
 $test = mysqli_query($conn, $sql);
-echo $test;
+echo "test";
   
 
 if(isset($_POST['username'])){
