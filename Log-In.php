@@ -37,8 +37,8 @@ $db = "coffee_emps";
 
 $conn = mysqli_connect($servername, $username, $password, $db);
 
- <!-- if  (!$conn) { die("Connect failed: ".mysqli_connect_error()); }
-echo "Connect success"; -->
+if  (!$conn) { die("Connect failed: ".mysqli_connect_error()); }
+echo "Connect success"; 
 
 
 
@@ -46,8 +46,7 @@ $sql = "SHOW DATABASES";
 $test = mysqli_query($conn, $sql);
 echo $test;
   
-
-<?-- if(isset($_POST['username'])){
+ if(isset($_POST['username'])){
     
     $uname=$_POST['username'];
     $password=$_POST['password'];
@@ -66,7 +65,7 @@ echo $test;
     }
         
 }
-?> -->
+?> 
   
   </body>
     
