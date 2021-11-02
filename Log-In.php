@@ -41,11 +41,16 @@ $password="teamyellow";
 $db="coffeeshop";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+$sql_retrive = "SELECT * FROM menu_tbl";
+$result = mysqli_query($conn, $sql_retrieve);
+
 if (!$conn) {
 
     echo "Connection failed!";
 
 }
+
 
 if(isset($_POST['username'])){
     
