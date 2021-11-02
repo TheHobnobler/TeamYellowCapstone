@@ -5,7 +5,7 @@ include 'Functions.php';
 
 
 
-<!-- <!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
     <head>
         <title>Log In</title>
@@ -74,4 +74,4 @@ if(isset($_POST['username'])){
 }
 ?>
 
--->
+
