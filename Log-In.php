@@ -11,7 +11,7 @@ include 'Functions.php';
 
 
 
- <?--
+
     
     <formmethod="post" action="#">
         <div class="form-input">
@@ -27,7 +27,6 @@ include 'Functions.php';
     </form>
     
     
--->
 
 <?php 
 
