@@ -27,9 +27,9 @@ include 'Functions.php';
     </form>
     
     
+-->
 
-
-<?php -->
+<?php 
 
 $servername = "localhost";
 $username = "root";
