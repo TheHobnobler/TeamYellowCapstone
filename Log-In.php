@@ -43,7 +43,7 @@ if ($conn->connect_error) {
   
  $sql = "SHOW TABLES";
 $result = $conn->query($sql);
-echo $result;
+echo $sql;
   ?>
 
 
