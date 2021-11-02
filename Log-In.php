@@ -42,13 +42,16 @@ $db = "coffee_emps";
 
 $conn = mysqli_connect($servername, $username, $password, $db);
 
-if  (!$conn) { die("Connect failed: ".mysqli_connect_error()); }
-echo "Connect success";
+<!-- if  (!$conn) { die("Connect failed: ".mysqli_connect_error()); }
+echo "Connect success"; -->
 
 $sql_retrieve = "SELECT * FROM loginfrom";
 $result = mysqli_query($conn, $sql_retrieve);
 
-
+$sql = "SELECT Pass FROM loginfrom WHERE User='Admin'";
+$test = mysqli_query($conn, $sql);
+echo $test;
+  
 
 if(isset($_POST['username'])){
     
