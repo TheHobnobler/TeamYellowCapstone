@@ -1,3 +1,8 @@
+<?php
+include 'Functions.php';
+?>
+<?=navbar('Hello World')?>
+
 <?php 
 
 $host="localhost";
