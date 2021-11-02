@@ -43,7 +43,7 @@ echo "Connect success";
 
 
 
-$sql = "SELECT * FROM loginfrom";
+$sql = "SHOW DATABASES";
 $test = mysqli_query($conn, $sql);
 echo $test;
   
