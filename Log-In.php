@@ -42,7 +42,7 @@ $conn = mysqli_connect($servername, $username, $password, $db);
 echo "Connect success"; 
 
 $sql_retrieve = "SELECT * FROM loginfrom";
-$result = mysqli_query($conn, $sql_retrieve);
+$result = "testing .... ";
 echo $result;
 
 $sql = "SELECT Pass FROM loginfrom WHERE User='Admin'";
