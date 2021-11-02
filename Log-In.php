@@ -4,14 +4,14 @@
  </head>
  <body>
 
-<!-- <?php
+ <?php
 include 'Functions.php';
 ?>
 <?=navbar('Hello World')?>
 
 
 
- 
+ <?--
     
     <formmethod="post" action="#">
         <div class="form-input">
