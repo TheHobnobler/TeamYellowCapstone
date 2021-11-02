@@ -5,15 +5,7 @@ include 'Functions.php';
 
 
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Log In</title>
-        <link rel="" a href=""/>
-    
-    </head>
-    
-<body> 
+
     
     <formmethod="post" action="#">
         <div class="form-input">
@@ -28,10 +20,7 @@ include 'Functions.php';
         
     </form>
     
-    
-</body>
-    
-</html>
+
 
 <?php 
 
