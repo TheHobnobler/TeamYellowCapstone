@@ -29,12 +29,13 @@ if (!$result) {
     die($message);
 }
 
-while ($row = mysql_fetch_assoc($result)) {
-    echo $row['SKU'];
-    echo $row['ITEM'];
-    echo $row['DESCRIPTION'];
-    echo $row['PRICE'];
-    echo $row['SIZE'];
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "Menu" . $row["ts"].  "<br>";
+  }
+} else {
+  echo "0 results";
 }
 
 mysqli_close($conn);
