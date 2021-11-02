@@ -35,10 +35,9 @@ $username = "root";
 $password = "teamyellow";
 $db = "coffee_emps";
 
-$conn = mysqli_connect($servername, $username, $password, $db);
+$conn = new mysqli($servername, $username, $password, $db);
 
-if  (!$conn) { die("Connect failed: ".mysqli_connect_error()); }
-echo "Connect success"; 
+
 
 
 
