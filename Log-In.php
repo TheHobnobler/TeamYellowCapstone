@@ -41,9 +41,9 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 } 
   
- $sql = "SHOW TABLES";
+ $sql = "SELECT * FROM loginfrom";
 $result = $conn->query($sql);
-echo $sql;
+echo $result;
   ?>
 
 
