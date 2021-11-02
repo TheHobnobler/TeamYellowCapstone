@@ -35,12 +35,12 @@ include 'Functions.php';
 
 <?php 
 
-$host="localhost";
-$user="root";
-$password="teamyellow";
-$db="coffee_emps";
+$servername = "localhost";
+$username = "root";
+$password = "teamyellow";
+$db = "coffee_emps";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $db);
 
 $sql_retrive = "SELECT * FROM loginfrom";
 $result = mysqli_query($conn, $sql_retrieve);
