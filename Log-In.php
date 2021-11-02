@@ -1,3 +1,9 @@
+<DOCTYPE! html>
+<head>
+ <title>Log In</title>
+ </head>
+ <body>
+
 <?php
 include 'Functions.php';
 ?>
@@ -5,15 +11,7 @@ include 'Functions.php';
 
 
 
- <!DOCTYPE html>
-<html>
-    <head>
-        <title>Log In</title>
-        <link rel="" a href=""/>
-    
-    </head>
-    
-<body> 
+ 
     
     <formmethod="post" action="#">
         <div class="form-input">
@@ -29,9 +27,7 @@ include 'Functions.php';
     </form>
     
     
-</body>
-    
-</html>
+
 
 <?php 
 
@@ -73,5 +69,9 @@ if(isset($_POST['username'])){
         
 }
 ?>
+  
+  </body>
+    
+</html>
 
 
