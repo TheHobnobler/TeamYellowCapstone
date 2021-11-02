@@ -10,8 +10,6 @@ include 'Functions.php';
 
 <?php
 
-if(isset($_GET['action']))
-              {
 
 
 $servername =  "localhost";
@@ -35,7 +33,7 @@ if ($result->num_rows > 0) {
 
 
 mysqli_close($conn);
-}
+
 ?>
 </body>
 </html>
