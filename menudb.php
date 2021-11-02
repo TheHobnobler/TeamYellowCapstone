@@ -24,7 +24,13 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 $sql_retrieve = "SELECT * FROM menu_tbl";
 $result = mysqli_query($conn, $sql_retrieve);
 
-echo $result;
+while ($row = mysql_fetch_assoc($result)) {
+    echo $row['SKU'];
+    echo $row['ITEM'];
+    echo $row['DESCRIPTION'];
+    echo $row['PRICE'];
+    echo $row['SIZE'];
+}
 
 mysqli_close($conn);
 }
