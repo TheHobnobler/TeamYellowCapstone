@@ -42,7 +42,7 @@ $db="coffee-emps";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-$sql_retrive = "SELECT * FROM ";
+$sql_retrive = "SELECT * FROM loginfrom";
 $result = mysqli_query($conn, $sql_retrieve);
 
 if (!$conn) {
