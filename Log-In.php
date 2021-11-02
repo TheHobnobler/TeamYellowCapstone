@@ -41,7 +41,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 } 
   
- $sql = "SHOW DATABASES";
+ $sql = "SHOW TABLES";
 $result = $conn->query($sql);
 echo $result;
   ?>
