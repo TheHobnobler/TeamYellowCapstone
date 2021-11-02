@@ -38,11 +38,11 @@ include 'Functions.php';
 $host="localhost";
 $user="root";
 $password="teamyellow";
-$db="coffeeshop";
+$db="";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-$sql_retrive = "SELECT * FROM menu_tbl";
+$sql_retrive = "SELECT * FROM ";
 $result = mysqli_query($conn, $sql_retrieve);
 
 if (!$conn) {
