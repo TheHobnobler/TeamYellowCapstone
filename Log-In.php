@@ -41,11 +41,9 @@ $conn = mysqli_connect($servername, $username, $password, $db);
  if  (!$conn) { die("Connect failed: ".mysqli_connect_error()); }
 echo "Connect success"; 
 
-$sql_retrieve = "SELECT * FROM loginfrom";
-$result = "testing .... ";
-echo $result;
 
-$sql = "SELECT Pass FROM loginfrom WHERE User='Admin'";
+
+$sql = "SELECT * FROM loginfrom";
 $test = mysqli_query($conn, $sql);
 echo $test;
   
