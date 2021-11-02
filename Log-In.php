@@ -5,7 +5,15 @@ include 'Functions.php';
 
 
 
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log In</title>
+        <link rel="" a href=""/>
+    
+    </head>
+    
+<body> 
     
     <formmethod="post" action="#">
         <div class="form-input">
@@ -20,7 +28,10 @@ include 'Functions.php';
         
     </form>
     
-
+    
+</body>
+    
+</html>
 
 <?php 
 
@@ -39,7 +50,7 @@ $result = mysqli_query($conn, $sql_retrieve);
 
 $sql = "SELECT Pass FROM loginfrom WHERE User='Admin'";
 $test = mysqli_query($conn, $sql);
-echo "hello";
+echo $test;
   
 
 if(isset($_POST['username'])){
