@@ -43,7 +43,14 @@ if ($conn->connect_error) {
   
 $sql = "SELECT * FROM loginfrom";
 $result = mysqli_query($conn, $sql);
-echo $result;
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo $row["User"]. $row["Pass"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
   ?>
 
 
