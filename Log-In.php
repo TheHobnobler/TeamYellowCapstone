@@ -45,11 +45,6 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 $sql_retrive = "SELECT * FROM loginfrom";
 $result = mysqli_query($conn, $sql_retrieve);
 
-if (!$conn) {
-
-    echo "Connection failed!";
-
-}
 
 
 if(isset($_POST['username'])){
