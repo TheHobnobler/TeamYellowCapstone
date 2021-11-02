@@ -38,7 +38,7 @@ include 'Functions.php';
 $host="localhost";
 $user="root";
 $password="teamyellow";
-$db="coffee_emps";
+$db="coffeeshop";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
