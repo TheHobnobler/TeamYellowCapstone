@@ -38,7 +38,7 @@ include 'Functions.php';
 $host="localhost";
 $user="root";
 $password="teamyellow";
-$db="";
+$db="coffee-emps";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -57,7 +57,7 @@ if(isset($_POST['username'])){
     $uname=$_POST['username'];
     $password=$_POST['password'];
     
-    $sql="select * from loginform where user='".$uname."'AND Pass='".$password."' limit 1";
+    $sql="select * from loginfrom where user='".$uname."'AND Pass='".$password."' limit 1";
     
     $result=mysql_query($sql);
     
