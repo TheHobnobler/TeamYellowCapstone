@@ -40,8 +40,7 @@ $user="root";
 $password="teamyellow";
 $db="coffee_emps";
 
-mysql_connect($host,$user,$password);
-mysql_select_db($db);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 if(isset($_POST['username'])){
     
