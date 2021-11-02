@@ -23,6 +23,11 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 $sql_retrieve = "SELECT * FROM menu_tbl";
 $result = mysqli_query($conn, $sql_retrieve);
+    
+if (!$result) {
+    $message .= 'Whole query: ' .$query;
+    die($message);
+}
 
 while ($row = mysql_fetch_assoc($result)) {
     echo $row['SKU'];
