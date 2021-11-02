@@ -48,7 +48,7 @@ $test = mysqli_query($conn, $sql);
 echo $test;
   
 
-if(isset($_POST['username'])){
+<?-- if(isset($_POST['username'])){
     
     $uname=$_POST['username'];
     $password=$_POST['password'];
@@ -67,7 +67,7 @@ if(isset($_POST['username'])){
     }
         
 }
-?>
+?> -->
   
   </body>
     
