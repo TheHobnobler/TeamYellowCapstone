@@ -5,7 +5,7 @@ include 'Functions.php';
 
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <title>Log In</title>
@@ -42,8 +42,8 @@ $db = "coffee_emps";
 
 $conn = mysqli_connect($servername, $username, $password, $db);
 
-<!-- if  (!$conn) { die("Connect failed: ".mysqli_connect_error()); }
-echo "Connect success"; -->
+ if  (!$conn) { die("Connect failed: ".mysqli_connect_error()); }
+echo "Connect success"; 
 
 $sql_retrieve = "SELECT * FROM loginfrom";
 $result = mysqli_query($conn, $sql_retrieve);
@@ -74,3 +74,4 @@ if(isset($_POST['username'])){
 }
 ?>
 
+-->
