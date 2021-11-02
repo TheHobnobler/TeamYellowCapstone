@@ -44,11 +44,12 @@ if ($conn->connect_error) {
  $sql = "SHOW DATABASES";
 $result = $conn->query($sql);
 echo $result;
+  ?>
 
 
 
 
-
+<!--
   
  if(isset($_POST['username'])){
     
@@ -70,7 +71,7 @@ echo $result;
         
 }
 ?> 
-  
+  -->
   </body>
     
 </html>
