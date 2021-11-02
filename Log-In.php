@@ -42,6 +42,9 @@ $db = "coffee_emps";
 
 $conn = mysqli_connect($servername, $username, $password, $db);
 
+if  (!$conn) { die("Connect failed: ".mysqli_connect_error()); }
+echo "Connect success";
+
 $sql_retrive = "SELECT * FROM loginfrom";
 $result = mysqli_query($conn, $sql_retrieve);
 
