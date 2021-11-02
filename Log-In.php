@@ -35,10 +35,10 @@ include 'Functions.php';
 
 <?php 
 
-$host="";
-$user="";
-$password="";
-$db="";
+$host="localhost";
+$user="root";
+$password="teamyellow";
+$db="coffee_emps";
 
 mysql_connect($host,$user,$password);
 mysql_select_db($db);
