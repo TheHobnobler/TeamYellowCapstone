@@ -56,7 +56,7 @@ if ($result->num_rows > 0) {
 
 
 
-<?php
+<!---
   
  if(isset($_POST['username'])){
     
