@@ -55,4 +55,18 @@ function ReadData()
             echo("Error!");
         }
     }
+
+
+
+    function OpenConnection()
+{
+    $serverName = "aatjxyjvs2g8ic.cayunuubrbla.us-east-1.rds.amazonaws.com,1433";
+    $connectionOptions = array("Database"=>"LoveYouALatte",
+        "Uid"=>"root", "PWD"=>"Capstone2021!");
+    $conn = sqlsrv_connect($serverName, $connectionOptions);
+    if($conn == false)
+        die(FormatErrors(sqlsrv_errors()));
+
+    return $conn;
+}
   ?>
