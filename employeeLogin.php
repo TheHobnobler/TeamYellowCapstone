@@ -32,16 +32,14 @@ if ($result->num_rows > 0) {
 }
 
 */
-?>
-<?=ReadData()?>
-
-<?php
-
-function ReadData()
-    {
-        try
+try
         {
-            $conn = OpenConnection();
+$serverName = "aatjxyjvs2g8ic.cayunuubrbla.us-east-1.rds.amazonaws.com,1433";
+    $connectionOptions = array("Database"=>"LoveYouALatte",
+        "Uid"=>"root", "PWD"=>"Capstone2021!");
+    $conn = sqlsrv_connect($serverName, $connectionOptions);
+    if($conn == false)
+        die(FormatErrors(sqlsrv_errors()));
             echo "connected";
             $tsql = "SELECT * FROM Coffee";
             $result = sqlsrv_query($conn, $tsql);
@@ -57,19 +55,12 @@ function ReadData()
         {
             echo("Error!");
         }
-    }
+    
 
 
 
-    function OpenConnection()
-{
-    $serverName = "aatjxyjvs2g8ic.cayunuubrbla.us-east-1.rds.amazonaws.com,1433";
-    $connectionOptions = array("Database"=>"LoveYouALatte",
-        "Uid"=>"root", "PWD"=>"Capstone2021!");
-    $conn = sqlsrv_connect($serverName, $connectionOptions);
-    if($conn == false)
-        die(FormatErrors(sqlsrv_errors()));
+    
 
-    return $conn;
-}
+
+
   ?>
