@@ -7,7 +7,7 @@ session_start();
 
 <?=navbar('Login')?>
 
-
+<div class='container'>
 
 
 
@@ -32,6 +32,8 @@ session_start();
           </form>
     
     <div id='returnBox'></div>
+
+</div>
 
 <?php 
 
