@@ -25,6 +25,12 @@ include 'Functions.php';
         <input onclick='employeeLogin("foo")' type="submit" type="submit" value="LOGIN" class="btn-login">
         
     </form>
+
+
+    <form action=''>
+            <label for='fname'></label>
+            <input type='button' value ='employeeLogin' id='' name='' onclick='employeeLogin(this.name)'>
+          </form>
     
     
 
