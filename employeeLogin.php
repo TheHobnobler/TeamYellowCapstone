@@ -45,10 +45,10 @@ function ReadData()
             $result = sqlsrv_query($conn, $tsql);
             if ($results == FALSE)
               die(FormatErrors(sqlsrv_errors()));
-            while($row = mssql_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
+            while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
               echo $row["coffee"]. " " .$row["size"]. "<br>";
           }
-        
+          sqlsrv_free_stmt($results);
             sqlsrv_close($conn);
         }
         catch(Exception $e)
