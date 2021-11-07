@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
 
 
 
-$servername = "localhost";
+$servername = "aatjxyjvs2g8ic.cayunuubrbla.us-east-1.rds.amazonaws.com,1433";
 $username = "root";
 $password = "Capstone2021!";
 $db = "LoveYouALatte";
