@@ -28,7 +28,7 @@ session_start();
 
     <form action=''>
             <label for='fname'></label>
-            <input type='button' value ='employeeLogin' id='' name='' onclick='employeeLogin(this.name)'>
+            <input type='button' value ='employeeLogin' id='' name='foo' onclick='employeeLogin(this.name)'>
           </form>
     
     <div id='returnBox'></div>
