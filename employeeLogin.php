@@ -6,7 +6,8 @@ session_start();
 
 //echo $q;
 
-echo $_SESSION["foo"];
+echo $_SESSION["count"];
+$_SESSION["count"] ++;
 
 $servername = "localhost";
 $username = "root";
