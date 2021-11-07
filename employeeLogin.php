@@ -32,12 +32,14 @@ if ($result->num_rows > 0) {
 }
 
 */
-try
-        {
+
 $serverName = "aatjxyjvs2g8ic.cayunuubrbla.us-east-1.rds.amazonaws.com,1433";
     $connectionOptions = array("Database"=>"LoveYouALatte",
         "Uid"=>"root", "PWD"=>"Capstone2021!");
     $conn = sqlsrv_connect($serverName, $connectionOptions);
+try
+        {
+
     if($conn == false)
         die(FormatErrors(sqlsrv_errors()));
             echo "connected";
