@@ -32,7 +32,7 @@ include 'Functions.php';
             <input type='button' value ='employeeLogin' id='' name='' onclick='employeeLogin(this.name)'>
           </form>
     
-    
+    <div id='foo'></div>
 
 <?php 
 
