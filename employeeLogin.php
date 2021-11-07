@@ -33,10 +33,16 @@ if ($result->num_rows > 0) {
 
 */
 
-$serverName = "aatjxyjvs2g8ic.cayunuubrbla.us-east-1.rds.amazonaws.com,1433";
-    $connectionOptions = array("Database"=>"LoveYouALatte",
-        "Uid"=>"root", "PWD"=>"Capstone2021!");
-    $conn = sqlsrv_connect($serverName, $connectionOptions);
+$serverName = "aatjxyjvs2g8ic.cayunuubrbla.us-east-1.rds.amazonaws.com\\sqlexpress, 1433"; //serverName\instanceName
+$connectionInfo = array( "Database"=>"LoveYouALatte", "UID"=>"root", "PWD"=>"Capstone2021!");
+$conn = sqlsrv_connect( $serverName, $connectionInfo);
+
+if( $conn ) {
+     echo "Connection established.<br />";
+}else{
+     echo "Connection could not be established.<br />";
+     die( print_r( sqlsrv_errors(), true));
+}
 try
         {
 
@@ -57,12 +63,6 @@ try
         {
             echo("Error!");
         }
-    
-
-
-
-    
-
-
+  
 
   ?>
