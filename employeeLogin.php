@@ -36,25 +36,23 @@ if ($result->num_rows > 0) {
 
 
 
-$servername = "aatjxyjvs2g8ic.cayunuubrbla.us-east-1.rds.amazonaws.com,1433";
-$username = "root";
-$password = "Capstone2021!";
-$db = "LoveYouALatte";
-
-$conn = new mysqli($servername, $username, $password, $db);
- 
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-} 
-  
-$sql = "SELECT * FROM Coffee";
-$result = mysqli_query($conn, $sql);
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo $row["coffee"]. $row["size"]. "<br>";
-  }
-} else {
-  echo "0 results";
-}
+function ReadData()
+    {
+        try
+        {
+            $conn = OpenConnection();
+            $tsql = "SELECT * FROM Coffee";
+            $result = sqlsrv_query($conn, $tsql);
+            if ($results -> num_rows > 0){
+            while($row = mssql_fetch_array($result)) {
+              echo $row["coffee"]. " " .$row["size"]. "<br>";
+          }
+        }
+            sqlsrv_close($conn);
+        }
+        catch(Exception $e)
+        {
+            echo("Error!");
+        }
+    }
   ?>
