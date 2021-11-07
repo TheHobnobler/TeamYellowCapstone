@@ -71,6 +71,18 @@ function getButtonName(str) {
       xmlhttp.open("GET", "removeItem.php?q=" + str, true);
       xmlhttp.send();
     }
+
+
+   function employeeLogin(str) {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("cart").innerHTML = this.responseText;
+        }
+      };
+      xmlhttp.open("GET", "employeeLogin.php?q=" + str, true);
+      xmlhttp.send();
+    }
   
   
   
