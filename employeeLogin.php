@@ -33,16 +33,22 @@ if ($result->num_rows > 0) {
 
 */
 
-$serverName = "aatjxyjvs2g8ic.cayunuubrbla.us-east-1.rds.amazonaws.com\\sqlexpress, 1433"; //serverName\instanceName
-$connectionInfo = array( "Database"=>"LoveYouALatte", "UID"=>"root", "PWD"=>"Capstone2021!");
-$conn = sqlsrv_connect( $serverName, $connectionInfo);
+$host ="xxx.xxx.xxx.xxx"; 
+$username ="root";
+$password ="Capstone2021!";
+$database ="LoveYouALatte";
 
-if( $conn ) {
-     echo "Connection established.<br />";
-}else{
-     echo "Connection could not be established.<br />";
-     die( print_r( sqlsrv_errors(), true));
+mssql_connect($host, $username, $password);
+mssql_select_db($database);
+
+$query ="SELECT * FROM Coffee";
+$result =mssql_query($query);
+while ( $record = mssql_fetch_array($result) )
+{
+	echo $record["coffee"] .", ". $record["size"] ."<br />";
 }
+
+/*
 try
         {
 
@@ -64,5 +70,5 @@ try
             echo("Error!");
         }
   
-
+*/
   ?>
