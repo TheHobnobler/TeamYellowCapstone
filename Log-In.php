@@ -1,13 +1,12 @@
-<DOCTYPE! html>
-<head>
- <title>Log In</title>
- </head>
- <body>
-
- <?php
+<?php
 include 'Functions.php';
+session_start();
 ?>
-<?=navbar('Hello World')?>
+
+
+
+<?=navbar('Login')?>
+
 
 
 
