@@ -32,9 +32,10 @@ if ($result->num_rows > 0) {
 }
 
 */
+?>
+<?=ReadData()?>
 
-
-
+<?php
 
 function ReadData()
     {
