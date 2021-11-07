@@ -1,7 +1,10 @@
 <?php 
 
+session_start();
+
 $q = $_REQUEST["q"];
-echo "foo" .$q."";
+$_SESSION["foo"] += $q;
+echo $_SESSION["foo"];
 
 $servername = "localhost";
 $username = "root";
