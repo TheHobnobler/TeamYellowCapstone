@@ -22,7 +22,7 @@ include 'Functions.php';
              <input type="password" name="password" placeholder="Enter your Passsword">
         </div>
         
-        <input type="submit" type="submit" value="LOGIN" class="btn-login">
+        <input onclick='employeeLogin("foo")' type="submit" type="submit" value="LOGIN" class="btn-login">
         
     </form>
     
@@ -82,5 +82,3 @@ if ($result->num_rows > 0) {
   </body>
     
 </html>
-
-
