@@ -41,6 +41,7 @@ function ReadData()
         try
         {
             $conn = OpenConnection();
+            echo "connected";
             $tsql = "SELECT * FROM Coffee";
             $result = sqlsrv_query($conn, $tsql);
             if ($results == FALSE)
