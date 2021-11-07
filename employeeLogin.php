@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
 
 */
 
-$host ="xxx.xxx.xxx.xxx"; 
+$host ="aatjxyjvs2g8ic.cayunuubrbla.us-east-1.rds.amazonaws.com, 1433"; 
 $username ="root";
 $password ="Capstone2021!";
 $database ="LoveYouALatte";
