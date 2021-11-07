@@ -31,7 +31,7 @@ session_start();
             <input type='button' value ='employeeLogin' id='' name='foo' onclick='employeeLogin(this.name)'>
           </form>
     
-    <div id='returnBox'></div>
+    <span id='returnBox'></span>
 
 </div>
 
