@@ -1,6 +1,8 @@
 <?php
 include 'Functions.php';
 session_start();
+
+$_SESSION["foo"] ="foo"; 
 ?>
 
 
@@ -28,10 +30,10 @@ session_start();
 
     <form action=''>
             <label for='fname'></label>
-            <input type='button' value ='employeeLogin' id='' name='foo' onclick='employeeLogin(this.name)'>
+            <input type='button' value ='employeeLogin' id='' name='foo' onclick='employeeLogin(this.innerHTML)'>
           </form>
     
-    <span id='returnBox'></span>
+    <span id='returnBox'>foo</span>
 
 </div>
 
