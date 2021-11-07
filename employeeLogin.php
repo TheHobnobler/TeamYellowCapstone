@@ -2,10 +2,10 @@
 
 session_start();
 
-$q = $_REQUEST["q"];
+//$q = $_REQUEST["q"];
 
-echo $q;
-$_SESSION["foo"] += $q;
+//echo $q;
+
 echo $_SESSION["foo"];
 
 $servername = "localhost";
