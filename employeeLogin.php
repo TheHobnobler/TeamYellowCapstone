@@ -3,6 +3,8 @@
 session_start();
 
 $q = $_REQUEST["q"];
+
+echo $q;
 $_SESSION["foo"] += $q;
 echo $_SESSION["foo"];
 
