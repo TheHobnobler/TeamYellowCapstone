@@ -30,7 +30,7 @@ $_SESSION["foo"] ="foo";
 
     <form action=''>
             <label for='fname'></label>
-            <input type='button' value ='employeeLogin' id='' name='foo' onclick='employeeLogin(this.innerHTML)'>
+            <input type='button' value ='employeeLogin' id='' name='foo' onclick='employeeLogin(document.getElementById("returnBox").innerHTML)'>
           </form>
     
     <span id='returnBox'>foo</span>
