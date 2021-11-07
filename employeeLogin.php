@@ -1,7 +1,7 @@
 <?php 
 
 $q = $_REQUEST["q"];
-echo "foo" + $q + "";
+echo "foo" .$q."";
 
 $servername = "localhost";
 $username = "root";
