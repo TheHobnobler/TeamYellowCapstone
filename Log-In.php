@@ -31,7 +31,7 @@ session_start();
             <input type='button' value ='employeeLogin' id='' name='' onclick='employeeLogin(this.name)'>
           </form>
     
-    <div id='foo'></div>
+    <div id='returnBox'></div>
 
 <?php 
 
