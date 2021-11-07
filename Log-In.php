@@ -9,7 +9,7 @@ $_SESSION["count"];
 
 <?=navbar('Login')?>
 <?php
-    $serverName = "aatjxyjvs2g8ic.cayunuubrbla.us-east-1.rds.amazonaws.com,1433"; //serverName\instanceName, portNumber (default is 1433)
+$serverName = "aatjxyjvs2g8ic.cayunuubrbla.us-east-1.rds.amazonaws.com,1433"; //serverName\instanceName, portNumber (default is 1433)
 $connectionInfo = array( "Database"=>"LoveYouALatte", "UID"=>"root", "PWD"=>"Capstone2021!");
 $conn = sqlsrv_connect( $serverName, $connectionInfo);
 
@@ -19,6 +19,7 @@ if( $conn ) {
      echo "Connection could not be established.<br />";
      die( print_r( sqlsrv_errors(), true));
 }
+sqlsrv_close();
   ?>
 <div class='container'>
 
