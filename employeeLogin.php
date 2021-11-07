@@ -43,11 +43,12 @@ function ReadData()
             $conn = OpenConnection();
             $tsql = "SELECT * FROM Coffee";
             $result = sqlsrv_query($conn, $tsql);
-            if ($results -> num_rows > 0){
-            while($row = mssql_fetch_array($result)) {
+            if ($results == FALSE)
+              die(FormatErrors(sqlsrv_errors()));
+            while($row = mssql_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
               echo $row["coffee"]. " " .$row["size"]. "<br>";
           }
-        }
+        
             sqlsrv_close($conn);
         }
         catch(Exception $e)
