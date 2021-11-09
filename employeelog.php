@@ -27,6 +27,7 @@ if(isset($_POST['but_submit'])){
 
 }
 ?>
+<DOCTYPE! html>
 <html>
     <head>
         <title>Create simple login page with PHP and MySQL</title>
