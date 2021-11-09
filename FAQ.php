@@ -5,7 +5,7 @@ include 'Functions.php';
 
 <div class="container">
   
-  <h1>Our Story</h1>
+  <h1>Our tory</h1>
   <p>Love You A Latte</p>
   <p>We are the oldest coffee house in the city of Columbus State. We started in Leipzig, Germany.<br>
     Our first cup was poured in Europe in 1711 and it has not stopped since.<br>
