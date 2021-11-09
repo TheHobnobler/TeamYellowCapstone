@@ -3,6 +3,13 @@
 <?php
 include "config.php";
 
+if(isset($_SESSION["timeoutstart"])) {
+if ((time() - ($_SESSION["timeoutstart"])) > 900) {
+	$_SESSION["threestrikes"] = False;
+	}
+	else { header('Location: timeout.php)'; }
+	
+
 while(!($_SESSION["threestrikes"]) {
 
 for ($x = 0; $x < 3; $x++) {
@@ -37,6 +44,7 @@ if(isset($_POST['but_submit'])){
 
    
 $_SESSION["threestrikes"] = True;
+$_SESSION["timeoutstart"] = time();
 }
 header('Location: timeout.php');
 
