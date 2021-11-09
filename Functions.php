@@ -20,9 +20,7 @@ function navbar($title) {
       <li class="nav-item">
         <a class="nav-link" href="HomePage.php">Home</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="TestCart.php">Menu</a>
-      </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="FAQ.php">FAQ</a>
       </li>
