@@ -8,15 +8,15 @@ session_start();
 
 <?php
 // Set session variables
-$_SESSION["favcolor"] = "green";
-$_SESSION["favanimal"] = "cat";
-echo "Session variables are set.";
+$_SESSION["Username"] = "John";
+$_SESSION["Password"] = "Yellow";
+
 ?>
 
 <?php
 // Echo session variables that were set on previous page
-echo $_SESSION["favcolor"];
-echo $_SESSION["favanimal"];
+echo "Hello " . $_SESSION["Username"] . ".<br>";
+
 ?>
 
 
