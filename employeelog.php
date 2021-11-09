@@ -1,9 +1,11 @@
-<!-- <?php session_(); 
+<?php session_start(); 
 ?>
 <?php
 include "config.php";
 
-
+for ($x = 0; $x < 2; $x++) {
+  echo "The number is: $x <br>";
+} 
 if(isset($_POST['but_submit'])){
 
     $uname = mysqli_real_escape_string($con,$_POST['txt_uname']);
@@ -29,8 +31,9 @@ if(isset($_POST['but_submit'])){
 
     }
 
-}
-?> -->
+	}
+header('Location: timeout.php');
+?>
 
 <DOCTYPE! hmtl>
 
@@ -41,7 +44,7 @@ if(isset($_POST['but_submit'])){
     </head>
     <body>
         <div class="container">
-            <form method="post" action="">
+            <form method="post">
                 <div id="div_login">
                     <h1>Login</h1>
                     <div>
