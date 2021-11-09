@@ -1,10 +1,5 @@
-<?php
-// Start the session
-session_start();
-include 'Functions.php';
-
+<?php session_(); 
 ?>
-
 <?php
 include "config.php";
 
