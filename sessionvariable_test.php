@@ -23,7 +23,7 @@ echo "Hello " . $_SESSION["Username"] . ".<br>";
 
 ?>
 
-<?php if (SESSION["Username"] == "John") && (_SESSION["Password"] == "Yellow" {
+<?php 
 redirect("54.89.175.68/TeamYellowCapstone/LoginSuccessful.php")
 } 
 ?>
