@@ -3,9 +3,11 @@
 <?php
 include "config.php";
 
-for ($x = 0; $x < 2; $x++) {
-  echo "The number is: $x <br>";
-} 
+while(!($_SESSION["threestrikes"]) {
+
+for ($x = 0; $x < 3; $x++) {
+  
+
 if(isset($_POST['but_submit'])){
 
     $uname = mysqli_real_escape_string($con,$_POST['txt_uname']);
@@ -18,22 +20,27 @@ if(isset($_POST['but_submit'])){
         $result = mysqli_query($con,$sql_query);
         $row = mysqli_fetch_array($result);
 
-        $count = $row['cntUser'];
+        $count = $row['cntUser']; }
 
         if($count > 0){
             $_SESSION['uname'] = $uname;
             header('Location: home.php');
-        }else{
-			else{
+        }
+		else{
+			
             echo "Invalid username and password";
 			
-        }
+        
+} 
+}
+}
 
-    }
-
-	}
+   
+$_SESSION["threestrikes"] = True;
+}
 header('Location: timeout.php');
-?>
+
+?> 
 
 <DOCTYPE! hmtl>
 
