@@ -1,4 +1,11 @@
 <?php
+// Start the session
+session_start();
+include 'Functions.php';
+
+?>
+
+<?php
 include "config.php";
 
 
