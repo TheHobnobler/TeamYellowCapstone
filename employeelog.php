@@ -1,4 +1,4 @@
-<?php session_(); 
+<!-- <?php session_(); 
 ?>
 <?php
 include "config.php";
@@ -30,7 +30,8 @@ if(isset($_POST['but_submit'])){
     }
 
 }
-?>
+?> -->
+
 <DOCTYPE! hmtl>
 
 <html>
