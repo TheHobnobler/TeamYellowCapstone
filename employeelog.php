@@ -1,3 +1,5 @@
+<?php session_(); 
+?>
 <?php
 include "config.php";
 
@@ -20,14 +22,17 @@ if(isset($_POST['but_submit'])){
             $_SESSION['uname'] = $uname;
             header('Location: home.php');
         }else{
+			else{
             echo "Invalid username and password";
+			
         }
 
     }
 
 }
 ?>
-<DOCTYPE! html>
+<DOCTYPE! hmtl>
+
 <html>
     <head>
         <title>Create simple login page with PHP and MySQL</title>
