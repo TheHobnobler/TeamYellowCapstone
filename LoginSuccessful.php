@@ -4,7 +4,7 @@
 
 
 <?php 
-  echo "Welcome to the employee login page " . $_SESSION["Username"];
+  echo "Welcome to the employee login page " . $_REQUEST["Username"];
   ?>
 
 </body>
