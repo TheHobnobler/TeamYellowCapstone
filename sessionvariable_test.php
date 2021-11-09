@@ -1,7 +1,11 @@
  <?php
 // Start the session
 session_start();
+include 'Functions.php';
+
 ?>
+
+<?=navbar('Login Final')?>
 <!DOCTYPE html>
 <html>
 <body>
