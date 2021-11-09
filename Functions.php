@@ -38,6 +38,9 @@ function navbar($title) {
       <li class="nav-item">
         <a class="nav-link" href="Log-In.php">Log In</a>
       </li>
+      <li class="nav-item">
+       <a class="nav-link" href="sessionvariable_test.php">Login Final</a>
+      </li>
       
     </ul>
   </div>
