@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-Welcome to the Employee Page
-</head>
 <body>
 
 
