@@ -1,7 +1,7 @@
-<DOCTYPE! html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Welcome to the Employee Page</title>
+Welcome to the Employee Page
 </head>
 <body>
 
