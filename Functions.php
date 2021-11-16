@@ -35,7 +35,7 @@ function navbar($title) {
         <a class="nav-link" href="index.html">Log In</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="AddMenuItemPage.php">Add Menu ITem TEST</a>
+        <a class="nav-link" href="AddMenuItemPage.php">Add Menu Item</a>
       </li>
       
     </ul>
