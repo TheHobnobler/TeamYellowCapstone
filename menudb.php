@@ -25,7 +25,7 @@ $result = mysqli_query($conn, $sql_retrieve);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "Item: " . $row["ITEM"]. "     ". "Size: " . $row["SIZE"]. "\t". "Price: " . $row["PRICE"]. "<br>";
+    echo "Item: " . $row["ITEM"]. "\t". "Size: " . $row["SIZE"]. "\t". "Price: " . $row["PRICE"]. "<br>";
   }
 } else {
   echo "0 results";
