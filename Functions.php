@@ -13,14 +13,15 @@ function navbar($title) {
 <title>$title</title>
 </head>
 <body>
-
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="HomePage.php">Home</a>
       </li>
-      
+      <li class="nav-item">
+        <a class="nav-link" href="TestCart.php">Menu</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="FAQ.php">FAQ</a>
       </li>
@@ -31,10 +32,10 @@ function navbar($title) {
         <a class="nav-link" href="retrievetime.php">Get Timestamp</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="menudb.php">Menu</a>
+        <a class="nav-link" href="menudb.php">Menu with Database</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.html">Log In</a>
+        <a class="nav-link" href="Log-In.php">Log In</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="AddMenuItemPage.php">Add Menu ITem TEST</a>
@@ -47,38 +48,42 @@ EOT;
 }
 
 
+
+
+
 function createMenuTable($array){
-  $count = 0;
-    foreach($_SESSION["coffee"] as $value){
-        
-      if(($count%3) == 0){
-        echo "<tr><td>Description:</td><td>" .$value["desc"]. "";
-      }
+  $servername =  "localhost";
+  $username  = "root";
+  $password = "teamyellow";
+  $dbname = "coffeeshop";
+  
+  $conn = mysqli_connect($servername, $username, $password, $dbname);
+  
+  $sql_retrieve = "SELECT * FROM menu_tbl";
+  $result = mysqli_query($conn, $sql_retrieve);
       
-      echo  
-        "<tr><td>".$value["item"].":&emsp;&emsp;</td><td> Size:&emsp;".$value["size"]."&emsp;&emsp;</td><td> Price:&emsp;$".$value["cost"]."&emsp;</td>
-            <td>
-            <form action=''>
-            <label for='fname'></label>
-            <input type='button' value ='Add To Cart' id='' name='".$value["lid"]."' onclick='getButtonName(this.name)'>
-          </form>
-
-            </td>
-        </tr>";
-
-        if(($count%3) == 2){
-          echo "<tr><td>&emsp;</td><td></td></tr>";
-        }
-       
-          $count++;
-     
+  if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+      echo 
+      "<tr><td>".$row["item"].":&emsp;&emsp;</td><td> Size:&emsp;".$row["size"]."&emsp;&emsp;</td><td> Price:&emsp;$".$eow["price"]."&emsp;</td>
+              <td>
+              <form action=''>
+              <label for='fname'></label>
+              <input type='button' value ='Add To Cart' id='' name='".$value["lid"]."' onclick='getButtonName(this.name)'>
+            </form>
+              </td>
+          </tr>";
     }
+  } else {
+    echo "0 results";
+  }
+     
 }
 
 
 
 
 
-      
 
 
