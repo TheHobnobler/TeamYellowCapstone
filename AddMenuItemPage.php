@@ -95,7 +95,7 @@ echo $size;
 echo "<br>";
 
 $sql = "INSERT INTO menu_tbl (item, description, price, size)
-VALUES ('{$name}', '{$desc}', '{$price}', '{$size}';)";
+VALUES ('{$name}', '{$desc}', '{$price}', '{$size}');";
 echo $sql;
 ?>
 </span>
