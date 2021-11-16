@@ -95,13 +95,13 @@ echo $size;
 echo "<br>";
 
 $sql = "insert into  menu_tbl (item, 'description', price, size) values ('{$name}', '{$desc}', '{$price}', '{$size}');";
-echo $sql;
+echo "<span id='sql'>{$sql};</span>"
 ?>
 </span>
 
 <form action=''>
         <label for='fname'>Are you ready to submit?</label>
-        <input type='button' value ='Submit' id='' name='Submit' onclick='addMenuItemToDatabase(<?php $sql ?>)'>
+        <input type='button' value ='Submit' id='' name='Submit' onclick="addMenuItemToDatabase(document.getElementById('id').innerHTML)">
 </form>
 <span id='returnBox'></span>
 </div>
