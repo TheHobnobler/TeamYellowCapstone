@@ -1,24 +1,31 @@
 <?php
-include "config.php";
-
-// Check user login or not
-if(!isset($_SESSION['uname'])){
-    header('Location: index.php');
-}
-
-// logout
-if(isset($_POST['but_logout'])){
-    session_destroy();
-    header('Location: index.php');
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: index.html');
+	exit;
 }
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-        <h1>Homepage</h1>
-        <form method='post' action="">
-            <input type="submit" value="Logout" name="but_logout">
-        </form>
-    </body>
+	<head>
+		<meta charset="utf-8">
+		<title>Home Page</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				<h1>Website Title</h1>
+				<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			</div>
+		</nav>
+		<div class="content">
+			<h2>Home Page</h2>
+			<p>Welcome back, <?=$_SESSION['name']?>!</p>
+		</div>
+	</body>
 </html>
