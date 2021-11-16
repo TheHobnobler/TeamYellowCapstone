@@ -2,10 +2,12 @@
 echo "foo";
 
 $q = $_REQUEST["q"];
+echo $q;
 
 $sql = $q;
 echo $sql;
 
+/*
 $servername =  "localhost";
 $username  = "root";
 $password = "teamyellow";
@@ -22,7 +24,7 @@ if ($conn->query($sql) === TRUE) {
   
   $conn->close();
 
-
+*/
 
 
 ?>
