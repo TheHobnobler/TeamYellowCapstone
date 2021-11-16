@@ -66,7 +66,7 @@ function createMenuTable($array){
     // output data of each row
     while($row = $result->fetch_assoc()) {
       echo 
-      "<tr><td>".$row["ITEM"].":&emsp;&emsp;</td><td> Size:&emsp;".$row["SIZE"]."&emsp;&emsp;</td><td> Price:&emsp;$".$eow["PRICE"]."&emsp;</td>
+      "<tr><td>".$row["ITEM"].":&emsp;&emsp;</td><td> Size:&emsp;".$row["SIZE"]."&emsp;&emsp;</td><td> Price:&emsp;$".$row["PRICE"]."&emsp;</td>
               <td>
               <form action=''>
               <label for='fname'></label>
