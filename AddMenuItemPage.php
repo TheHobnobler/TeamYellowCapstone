@@ -95,7 +95,7 @@ echo $size;
 echo "<br>";
 
 $sql = "insert into  menu_tbl (item, description, price, size) values ('{$name}', '{$desc}', '{$price}', '{$size}');";
-echo "<span id='sql'>{$sql}</span>"
+echo "<span id='sql'></span>"
 ?>
 </span>
 
