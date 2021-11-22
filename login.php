@@ -1,5 +1,5 @@
 <?php
-	header('Location: Test.html')
+	
 	session_start();
 
 
