@@ -2,7 +2,6 @@
  <?php
 include 'Functions.php';
 ?>
-<?=navbar('Love You A Latte')?>
 	session_start();
 	//check if can login again
 	if(isset($_SESSION['attempt_again'])){
