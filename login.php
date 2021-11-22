@@ -1,7 +1,10 @@
 <?php
- <?php
 include 'Functions.php';
-?>	
+?>
+<?=navbar('Log In')?>
+
+<?php
+	
 	session_start();
 
 
