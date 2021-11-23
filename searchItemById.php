@@ -27,19 +27,19 @@ if ($conn->connect_error) {
       echo "<form method=''>
       <ul>
         
-      <li> Product SKU: <li><input class='form-control'  readonly id='name' type='text' name='name' value='{$row["SKU"]}'></li></li>
+      <li> Product SKU: <li><input class='form-control'  readonly id='name' type='text' name='name' value='" .$row["sku"]. "'></li></li>
         <br>
       
-        <li> Product Name: <li><input id='name' type='text' name='name' value='{$row["ITEM"]}'></li></li>
+        <li> Product Name: <li><input id='name' type='text' name='name' value='" .$row["item"]. "'></li></li>
        <br>
       
-        <li>Product Description: <li><input id='desc' type='text' name='desc' value ='{$row["DESCRIPTION"]}'></li></li>
+        <li>Product Description: <li><input id='desc' type='text' name='desc' value ='" .$row["description"]. "'></li></li>
         <br>
       
-        <li> Product Price: <li><input  id='price' type='text' name='price' value='{$row["PRICE"]}'></li></li>
+        <li> Product Price: <li><input  id='price' type='text' name='price' value='" .$row["price"]. "'></li></li>
         <br>
       
-        <li> Product Size: <li><input id='size' type='text' name='size' value='{$row["SIZE"]}'></li></li>
+        <li> Product Size: <li><input id='size' type='text' name='size' value='" .$row["size"]. "'></li></li>
         
         <li><input type='button' name='submit' value='Submit'></li>  
       </ul>
