@@ -109,7 +109,7 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
         <label for='fname'>Are you ready to submit changes?</label>
         <input type='button' value ='Submit' id='' name='Submit' onclick="updateMenuItem(document.getElementById('sql').innerHTML)">
 </form>
-<span id='returnBox'>foo</span>
+<span id='returnBox'></span>
 </div>
 </div>
 
