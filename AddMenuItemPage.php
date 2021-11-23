@@ -101,7 +101,7 @@ echo "<span id='sql' name='" .$sql. "'></span>";
 
 <form action=''>
         <label for='fname'>Are you ready to submit?</label>
-        <input type='button' value ='Submit' id='' name='Submit' onclick="addMenuItemToDatabase(document.getElementById('sql').getAtrribute('name'))">
+        <input type='button' value ='Submit' id='' name='Submit' onclick="<?php echo $sql?>">
 </form>
 <span id='returnBox'></span>
 </div>
