@@ -3,7 +3,7 @@
 
 $q = $_REQUEST["q"];
 
-echo $q;
+echo "jhsdgksjhdg";
 $sql = $q;
 
 
