@@ -23,7 +23,7 @@ if ($conn->connect_error) {
   if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {   
-        echo "<option value='{$row['sku']}'>{$row['item']} Price: {$row['price']} Size: {$row['size']}</option>";
+        echo "<option value='{$row['sku']}'>{$row['item']} Price: {$row['price']} Size: {$row['size']} -----SKU: {$row['sku']}</option>";
     }
     
   } else {
