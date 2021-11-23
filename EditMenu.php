@@ -53,7 +53,7 @@ include 'Functions.php';
 <ul>
   
   <li> Search Item Number : </li><li><input type="text" name="searchId" id='searchId'></li> 
-  <li><input type="button" name="submit" value="Search" onclick ="searchItemById('1')"></li> 
+  <li><input type="button" name="submit" value="Search" onclick ="searchItemById(getElementById('searchId').innerHTML)"></li> 
 
   <li> Search Item Name :  </li><li><input  type="text" name="searchName"></li>
 <li><input type="button" name="submit" value="Search" onclick = 'searchItemByName("")'></li>  
