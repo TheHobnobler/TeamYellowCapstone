@@ -3,7 +3,7 @@
 $q = $_REQUEST["q"];
 
 
-echo $q;
+echo "<option>" .$q. "</option>";
 /*
 $sql = "select sku, item, description, price, size from menu_tbl where item = '{$q}'; ";
 
