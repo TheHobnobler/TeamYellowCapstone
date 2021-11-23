@@ -21,7 +21,7 @@ include 'Functions.php';
   <li> Product Name: <li><input class='form-control' id='name' type="text" name="name"></li></li>
  <br>
 
-  <li>Product Description: <li><input class='form-control' id='desc' type="text" name="desc"></li></li>
+  <li>Product Description: <li><textarea class='form-control' id='desc' type="text" name="desc"></li></li>
   <br>
 
   <li> Product Price: <li><input class='form-control' id='price' type="text" name="price"></li></li>
