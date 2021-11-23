@@ -165,6 +165,9 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
     xmlhttp.send();
   }
 
+
+
+
   function searchItemById(str) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -177,11 +180,8 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
   }
 
 
-  function returnItemDetails(str) {
-      var x = document.getElementById("returnList");
-      var i = x.selectedIndex;
-      document.getElementById("returnBox").innerHTML = x.options[i].value;
 
+  function returnItemDetails(str) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -190,7 +190,12 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
     };
     xmlhttp.open("GET", "returnItemDetails.php?q=" + str, true);
     xmlhttp.send();
+    var x = document.getElementById("returnList");
+      var i = x.selectedIndex;
+      document.getElementById("returnBox").innerHTML = x.options[i].value;
   }
+
+
 
 
   function updateMenuItem(str) {
