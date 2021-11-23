@@ -49,7 +49,7 @@ if ($conn->connect_error) {
     <form method=''>
       <ul>
         
-      <li> Product SKU: <li><input class='form-control'  readonly id='name' type='text' name='name' value='{$q}'></li></li>
+      <li> Product SKU: <li><input class='form-control'  readonly id='name' type='text' name='name' value='nothing was found'></li></li>
         <br>
       
         <li> Product Name: <li><input id='name' type='text' name='name' value=''></li></li>
