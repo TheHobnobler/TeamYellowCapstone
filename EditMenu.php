@@ -130,7 +130,7 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
 <div class='col'><br><br><br><br><br><br><br>
 
 <div class='form-floating'>
-    <select class='form-select'  id='returnList' name='returnList' onchange="returnItemDetails('')">
+    <select class='form-select'  id='returnList' name='returnList' onchange="returnItemDetails(document.getElementById('skuNumber').innerHTML)">
 
     
 <option>Nothing selected yet</option>
@@ -189,7 +189,7 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("foo").innerHTML = this.responseText;
+        document.getElementById("sku").innerHTML = this.responseText;
       }
     };
     xmlhttp.open("GET", "returnItemDetails.php?q=" + str, true);
