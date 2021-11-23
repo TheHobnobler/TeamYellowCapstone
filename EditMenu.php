@@ -18,16 +18,16 @@ include 'Functions.php';
 <li> Product SKU: <li><input class="form-control"  readonly id='name' type="text" name="name"></li></li>
   <br>
 
-  <li> Product Name: <li><input id='name' type="text" name="name"></li></li>
+  <li> Product Name: <li><input class='form-control' id='name' type="text" name="name"></li></li>
  <br>
 
-  <li>Product Description: <li><input id='desc' type="text" name="desc"></li></li>
+  <li>Product Description: <li><input class='form-control' id='desc' type="text" name="desc"></li></li>
   <br>
 
-  <li> Product Price: <li><input  id='price' type="text" name="price"></li></li>
+  <li> Product Price: <li><input class='form-control' id='price' type="text" name="price"></li></li>
   <br>
 
-  <li> Product Size: <li><input id='size' type="text" name="size"></li></li>
+  <li> Product Size: <li><input class='form-control' id='size' type="text" name="size"></li></li>
   
   <li><input type="button" name="submit" value="Submit"></li>  
 </ul>
