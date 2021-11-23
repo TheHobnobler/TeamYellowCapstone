@@ -3,10 +3,10 @@
 
 $q = $_REQUEST["q"];
 
-echo "jkhsdfvkjshdvksjdhv";
+echo $q;
 $sql = $q;
 
-echo $sql;
+
 
 $servername =  "localhost";
 $username  = "root";
