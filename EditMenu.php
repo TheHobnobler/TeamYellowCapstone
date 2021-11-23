@@ -178,13 +178,17 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
 
 
   function returnItemDetails(str) {
+    var x = document.getElementById("returnList");
+  var i = x.selectedIndex;
+  var string = x.options[i].value;
+
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById("returnBox").innerHTML = this.responseText;
       }
     };
-    xmlhttp.open("GET", "returnItemDetails.php?q=" + str, true);
+    xmlhttp.open("GET", "returnItemDetails.php?q=" + string, true);
     xmlhttp.send();
   }
 
