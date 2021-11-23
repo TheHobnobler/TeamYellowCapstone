@@ -5,7 +5,6 @@
 
 $q = $_REQUEST["q"];
 
-echo $q;
 
 $array = explode(",",$q);
 $sku = $array[0];
