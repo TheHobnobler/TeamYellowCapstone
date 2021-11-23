@@ -2,6 +2,7 @@
 
 $q = $_REQUEST["q"];
 
+echo "somnething";
 echo $q;
 
 $sql = "select sku, item, description, price, size from menu_tbl where sku = '{$q}' ";
@@ -49,7 +50,7 @@ if ($conn->connect_error) {
     <form method=''>
       <ul>
         
-      <li> Product SKU: <li><input class='form-control'  readonly id='name' type='text' name='name' value='nothing was found'></li></li>
+      <li> Product SKU: <li><input class='form-control'  readonly id='name' type='text' name='name' value='noting was found'></li></li>
         <br>
       
         <li> Product Name: <li><input id='name' type='text' name='name' value=''></li></li>
