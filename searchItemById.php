@@ -33,7 +33,7 @@ if ($conn->connect_error) {
         <li> Product Name: <li><input class='form-control' id='name' type='text' name='name' value='" .$row["item"]. "'></li></li>
        <br>
       
-        <li>Product Description: <li><textarea class='form-control' id='desc' type='text' name='desc' value ='" .$row["description"]. "'></textarea></li></li>
+        <li>Product Description: <li><textarea class='form-control' id='desc' type='text' name='desc' value =''></textarea>" .$row["description"]. "</li></li>
         <br>
       
         <li> Product Price: <li><input class='form-control'  id='price' type='text' name='price' value='" .$row["price"]. "'></li></li>
