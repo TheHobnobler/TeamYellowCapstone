@@ -23,7 +23,7 @@ if ($conn->connect_error) {
   if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-      echo "<form method=''>
+      echo "
       <ul>
         
       <li> Product SKU: <li><input class='form-control'  readonly id='sku' type='text' name='sku' value='" .$row["sku"]. "'></li></li>
@@ -42,7 +42,7 @@ if ($conn->connect_error) {
     }
   } else {
     echo "
-    <form method=''>
+   
       <ul>
         
       <li> Product SKU: <li><input class='form-control'  readonly id='sku' type='text' name='sku' value='noting was found'></li></li>
