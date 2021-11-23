@@ -37,7 +37,9 @@ function navbar($title) {
       <li class="nav-item">
         <a class="nav-link" href="AddMenuItemPage.php">Add Menu Item</a>
       </li>
-      
+       <li class="nav-item">
+        <a class="nav-link" href="EditMenu.php">Add Menu Item</a>
+      </li>
     </ul>
   </div>
 </nav>
