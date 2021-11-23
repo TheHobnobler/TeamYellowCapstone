@@ -55,9 +55,10 @@ function test_input($data) {
     <h1>Item Activation Portal</h1>
     <p>This is a page to enter new items to the menu.</p>
 
-    <div id ='return'>
+    
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+<div id ='return'>
 <ul>
   
 <li> Product SKU: <li><input class="form-control"  readonly id='sku' type="text" name="name"></li></li>
