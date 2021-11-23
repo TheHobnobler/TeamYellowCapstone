@@ -4,7 +4,7 @@
 $q = $_REQUEST["q"];
 
 echo "jhsdgksjhdg";
-$sql = $q;
+$sql = "insert into  menu_tbl (item, description, price, size) values ($q);";
 
 
 
