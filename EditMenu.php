@@ -186,6 +186,7 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
     var x = document.getElementById("returnList");
       var i = x.selectedIndex;
       document.getElementById("skuNumber").innerHTML = x.options[i].value;
+      
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
