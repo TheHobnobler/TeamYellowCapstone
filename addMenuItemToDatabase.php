@@ -6,7 +6,7 @@ $q = $_REQUEST["q"];
 
 $sql = $q;
 
-
+echo $sql;
 
 $servername =  "localhost";
 $username  = "root";
