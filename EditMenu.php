@@ -72,17 +72,17 @@ include 'Functions.php';
 
 <script>
 
-var getId = document.getElementById("searchId");
-getId.addEventListener("keydown", function (e) {
-    if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
-        validate(e);
-    }
-});
+var input = document.getElementById("searchId");
 
-function validate(e) {
-    var text = e.target.value;
-    //validation of the input...
-}
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a clic
+  }
+});
 
  function searchItemByName(str) {
     var xmlhttp = new XMLHttpRequest();
