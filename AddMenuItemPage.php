@@ -96,7 +96,7 @@ echo "<br>";
 
 
 $sql = "{$name}', '{$desc}', '{$price}', '{$size}";
-echo "<span stye = 'display: none;' id='sql' name=''>{$sql}</span>";
+echo "<span style = 'display: none;' id='sql' name=''>{$sql}</span>";
 ?>
 </span>
 
