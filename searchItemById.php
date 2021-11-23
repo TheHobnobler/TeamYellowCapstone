@@ -30,16 +30,16 @@ if ($conn->connect_error) {
       <li> Product SKU: <li><input class='form-control'  readonly id='name' type='text' name='name' value='" .$row["sku"]. "'></li></li>
         <br>
       
-        <li> Product Name: <li><input id='name' type='text' name='name' value='" .$row["item"]. "'></li></li>
+        <li> Product Name: <li><input class='form-control' id='name' type='text' name='name' value='" .$row["item"]. "'></li></li>
        <br>
       
-        <li>Product Description: <li><input id='desc' type='text' name='desc' value ='" .$row["description"]. "'></li></li>
+        <li>Product Description: <li><input class='form-control' id='desc' type='text' name='desc' value ='" .$row["description"]. "'></li></li>
         <br>
       
-        <li> Product Price: <li><input  id='price' type='text' name='price' value='" .$row["price"]. "'></li></li>
+        <li> Product Price: <li><input class='form-control'  id='price' type='text' name='price' value='" .$row["price"]. "'></li></li>
         <br>
       
-        <li> Product Size: <li><input id='size' type='text' name='size' value='" .$row["size"]. "'></li></li>
+        <li> Product Size: <li><input class='form-control' id='size' type='text' name='size' value='" .$row["size"]. "'></li></li>
         
         <li><input type='button' name='submit' value='Submit'></li>  
       </ul>
@@ -53,16 +53,16 @@ if ($conn->connect_error) {
       <li> Product SKU: <li><input class='form-control'  readonly id='name' type='text' name='name' value='noting was found'></li></li>
         <br>
       
-        <li> Product Name: <li><input id='name' type='text' name='name' value=''></li></li>
+        <li> Product Name: <li><input class='form-control' id='name' type='text' name='name' value=''></li></li>
        <br>
       
-        <li>Product Description: <li><input id='desc' type='text' name='desc' value =''></li></li>
+        <li>Product Description: <li><input class='form-control' id='desc' type='text' name='desc' value =''></li></li>
         <br>
       
-        <li> Product Price: <li><input  id='price' type='text' name='price' value=''></li></li>
+        <li> Product Price: <li><input class='form-control'  id='price' type='text' name='price' value=''></li></li>
         <br>
       
-        <li> Product Size: <li><input id='size' type='text' name='size' value=''></li></li>
+        <li> Product Size: <li><input class='form-control' id='size' type='text' name='size' value=''></li></li>
         
         <li><input type='button' name='submit' value='Submit'></li>  
       </ul>
