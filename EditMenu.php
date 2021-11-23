@@ -139,6 +139,7 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
 <label for="sel1" class="form-label">Results from Search By Name</label>
 
 </div>
+<span id='skuNumber' style='opacity: 0;'></span>
 </div>
 
 <div class='col'></div>
@@ -184,7 +185,7 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
   function returnItemDetails(str) {
     var x = document.getElementById("returnList");
       var i = x.selectedIndex;
-      document.getElementById("returnBox").innerHTML = x.options[i].value;
+      document.getElementById("skuNumber").innerHTML = x.options[i].value;
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
