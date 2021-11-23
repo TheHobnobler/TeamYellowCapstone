@@ -128,14 +128,16 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
 
 
 <div class='col'><br><br><br><br><br><br><br>
+<span id='returnList'>
 
-<div class="form-floating">
-  <select class="form-select" id="returnList" name="returnList">
 
-</select>
-</div>
 
 </div>
+</span>
+
+</div>
+
+<div class='col'></div>
 
 </div>
 </div>
