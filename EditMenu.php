@@ -1,7 +1,7 @@
 <?php
 include 'Functions.php';
 ?>
-<?=navbar('Add Menu TEST')?>
+<?=navbar('Edit Menu Items')?>
 
 <?php
 // define variables and set to empty values
@@ -130,7 +130,7 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
 <div class='col'><br><br><br><br><br><br><br>
 
 <div class='form-floating'>
-    <select class='form-select'  id='returnList' name='returnList' onchange="returnItemDetails(document.getElementById('returnList').options[document.getElementById('returnList')].name))">
+    <select class='form-select'  id='returnList' name='returnList' onchange="returnItemDetails(document.getElementById('returnList').options[document.getElementById('returnList')].value))">
 
     
 <option>Nothing selected yet</option>
