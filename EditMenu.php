@@ -72,6 +72,17 @@ include 'Functions.php';
 
 <script>
 
+var getId = document.getElementById("searchId");
+getId.addEventListener("keydown", function (e) {
+    if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+        validate(e);
+    }
+});
+
+function validate(e) {
+    var text = e.target.value;
+    //validation of the input...
+}
 
  function searchItemByName(str) {
     var xmlhttp = new XMLHttpRequest();
