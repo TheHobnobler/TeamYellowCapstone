@@ -120,14 +120,21 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
   <li> Search Item Number : </li><li><input type="text" name="searchId" id='searchId'></li> 
   <li><input type="button" name="submit" value="Search" onclick ="searchItemById(document.getElementById('searchId').value)"></li> 
 
-  <li> Search Item Name :  </li><li><input  type="text" name="searchName"></li>
-<li><input type="button" name="submit" value="Search" onclick = 'searchItemByName("")'></li>  
+  <li> Search Item Name :  </li><li><input  type="text" name="searchName" id='searchName'></li>
+<li><input type="button" name="submit" value="Search" onclick = "searchItemByName(document.getElementById('searchName').value)"></li>  
 </ul>
 </form>
 </div>
 
 
-<div class='col'><span id ='searchReturn'><br><br><br><br><br><br><br>return stuff here i geuss</span>
+<div class='col'><br><br><br><br><br><br><br>
+
+<div class="form-floating">
+  <select class="form-select" id="returnList" name="returnList">
+
+</select>
+</div>
+
 </div>
 
 </div>
