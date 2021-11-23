@@ -95,7 +95,7 @@ echo $size;
 echo "<br>";
 
 
-$sql = "{$name}', '{$desc}', '{$price}', '{$size}";
+$sql = "'{$name}', '{$desc}', '{$price}', '{$size}'";
 echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
 ?>
 </span>
