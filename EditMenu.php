@@ -52,10 +52,10 @@ include 'Functions.php';
 <form action=''>
 <ul>
   
-  <li> Search Item Number : <li><input type="text" name="searchId" id='searchId'></li></li> 
+  <li> Search Item Number : </li><li><input type="text" name="searchId" id='searchId'></li> 
   <li><input type="button" name="submit" value="Search" onclick ="searchItemById(document.getElementById('searchId').innerHTML)"></li> 
 
-  <li> Search Item Name :  <li><input  type="text" name="searchName"></li></li>
+  <li> Search Item Name :  </li><li><input  type="text" name="searchName"></li>
 <li><input type="button" name="submit" value="Search" onclick = 'searchItemByName("")'></li>  
 </ul>
 </form>
