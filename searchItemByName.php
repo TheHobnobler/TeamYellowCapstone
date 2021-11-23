@@ -23,13 +23,10 @@ if ($conn->connect_error) {
   
   if ($result->num_rows > 0) {
     // output data of each row
-    echo " 
-    <div class='form-floating'>
-    <select class='form-select' id='returnList' name='returnList'> ";
     while($row = $result->fetch_assoc()) {   
         echo "<option>" .$row["ITEM"]. "\t". "Size: " . $row["SIZE"]. "\t". "Price: " . $row["PRICE"]. "</option";
     }
-    echo "</select>";
+    
   } else {
     echo "0 results";
   }
