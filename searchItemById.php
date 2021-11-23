@@ -26,7 +26,7 @@ if ($conn->connect_error) {
       echo "<form method=''>
       <ul>
         
-      <li> Product SKU: <li><input class='form-control'  readonly id='name' type='text' name='name' value='" .$row["sku"]. "'></li></li>
+      <li> Product SKU: <li><input class='form-control'  readonly id='sku' type='text' name='sku' value='" .$row["sku"]. "'></li></li>
         <br>
       
         <li> Product Name: <li><input class='form-control' id='name' type='text' name='name' value='" .$row["item"]. "'></li></li>
@@ -38,18 +38,14 @@ if ($conn->connect_error) {
         <li> Product Price: <li><input class='form-control'  id='price' type='text' name='price' value='" .$row["price"]. "'></li></li>
         <br>
       
-        <li> Product Size: <li><input class='form-control' id='size' type='text' name='size' value='" .$row["size"]. "'></li></li>
-        
-        <li><input type='button' name='submit' value='Submit'></li>  
-      </ul>
-      </form>";
+        <li> Product Size: <li><input class='form-control' id='size' type='text' name='size' value='" .$row["size"]. "'></li></li>";
     }
   } else {
     echo "
     <form method=''>
       <ul>
         
-      <li> Product SKU: <li><input class='form-control'  readonly id='name' type='text' name='name' value='noting was found'></li></li>
+      <li> Product SKU: <li><input class='form-control'  readonly id='sku' type='text' name='sku' value='noting was found'></li></li>
         <br>
       
         <li> Product Name: <li><input class='form-control' id='name' type='text' name='name' value=''></li></li>
@@ -62,8 +58,6 @@ if ($conn->connect_error) {
         <br>
       
         <li> Product Size: <li><input class='form-control' id='size' type='text' name='size' value=''></li></li>
-        
-        <li><input type='button' name='submit' value='Submit'></li>  
       </ul>
       </form>";
   }
