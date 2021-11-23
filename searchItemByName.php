@@ -27,7 +27,7 @@ if ($conn->connect_error) {
     }
     
   } else {
-    echo "0 results";
+    echo "<option> No results</option>";
   }
 
         
