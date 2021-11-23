@@ -96,13 +96,13 @@ echo "<br>";
 
 
 $sql = "'{$name}', '{$desc}', '{$price}', '{$size}'";
-echo "<span id='sql' name='" .$sql. "'>{$sql}</span>";
+echo "<span id='sql' name='" .$sql. "'></span>";
 ?>
 </span>
 
 <form action=''>
         <label for='fname'>Are you ready to submit?</label>
-        <input type='button' value ='Submit' id='' name='Submit' onclick="addMenuItemToDatabase(document.getElementById('sql').innerHTML)">
+        <input type='button' value ='Submit' id='' name='Submit' onclick="addMenuItemToDatabase(document.getElementById('sql').getAttribute('name'))">
 </form>
 <span id='returnBox'></span>
 </div>
