@@ -5,7 +5,7 @@ $q = $_REQUEST["q"];
 echo "somnething";
 echo $q;
 
-$sql = "select sku, item, description, price, size from menu_tbl where sku = '{$q}' ";
+$sql = "select sku, item, description, price, size from menu_tbl where sku = '{$q}'; ";
 
 $servername =  "localhost";
 $username  = "root";
