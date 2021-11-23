@@ -109,7 +109,7 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
         <label for='fname'>Are you ready to submit changes?</label>
         <input type='button' value ='Submit' id='' name='Submit' onclick="updateMenuItem(document.getElementById('sql').innerHTML)">
 </form>
-<span id='returnBox'></span>
+<span id='returnBox'>foo</span>
 </div>
 </div>
 
@@ -178,9 +178,9 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
 
 
   function returnItemDetails(str) {
-    var x = document.getElementById("returnList");
-  var i = x.selectedIndex;
-  var string = x.options[i].value;
+      var x = document.getElementById("returnList");
+      var i = x.selectedIndex;
+      var string = x.options[i].value;
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
