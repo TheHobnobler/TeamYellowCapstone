@@ -4,7 +4,7 @@ $q = $_REQUEST["q"];
 
 
 echo $q;
-
+/*
 $sql = "select sku, item, description, price, size from menu_tbl where item = '{$q}'; ";
 
 $servername =  "localhost";
@@ -31,4 +31,4 @@ if ($conn->connect_error) {
     echo "0 results";
   }
 
-        
+        */
