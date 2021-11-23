@@ -130,7 +130,7 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
 <div class='col'><br><br><br><br><br><br><br>
 
 <div class='form-floating'>
-    <select class='form-select'  id='returnList' name='returnList'>
+    <select class='form-select'  id='returnList' name='returnList' onchange="returnItemDetails(this.name)">
 
     
 <option>Nothing selected yet</option>
