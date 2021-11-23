@@ -139,6 +139,7 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
 </span>
 </select>
 </div>
+</div>
 
 <div class='col'></div>
 
