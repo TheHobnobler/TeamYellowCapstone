@@ -182,17 +182,18 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
 
 
   function returnItemDetails(str) {
+    var x = document.getElementById("returnList");
+      var i = x.selectedIndex;
+      document.getElementById("returnBox").innerHTML = x.options[i].value;
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("returnBox").innerHTML = this.responseText;
+        document.getElementById("return").innerHTML = this.responseText;
       }
     };
     xmlhttp.open("GET", "returnItemDetails.php?q=" + str, true);
     xmlhttp.send();
-    var x = document.getElementById("returnList");
-      var i = x.selectedIndex;
-      document.getElementById("returnBox").innerHTML = x.options[i].value;
+   
   }
 
 
