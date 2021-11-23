@@ -3,6 +3,50 @@ include 'Functions.php';
 ?>
 <?=navbar('Add Menu TEST')?>
 
+<?php
+// define variables and set to empty values
+$skuErr = $nameErr = $descErr = $priceErr = $sizeErr= "";
+$sku = $name = $desc = $price = $size = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["sku"])) {
+    $skuErr = "Product SKU is required";
+  } else {
+    $sku = test_input($_POST["sku"]);
+  }
+  
+  if (empty($_POST["name"])) {
+    $nameErr = "Product name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+  }
+    
+  if (empty($_POST["desc"])) {
+    $desc = "";
+  } else {
+    $desc = test_input($_POST["desc"]);
+  }
+
+  if (empty($_POST["price"])) {
+    $priceErr = "Product price is required";
+  } else {
+    $price = test_input($_POST["price"]);
+  }
+
+  if (empty($_POST["size"])) {
+    $sizeErr = "Product size is required";
+  } else {
+    $size = test_input($_POST["size"]);
+  }
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
 
 <div class='row'>
     <div class ='col'>
@@ -12,10 +56,11 @@ include 'Functions.php';
     <p>This is a page to enter new items to the menu.</p>
 
     <div id ='return'>
-<form method="">
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
 <ul>
   
-<li> Product SKU: <li><input class="form-control"  readonly id='name' type="text" name="name"></li></li>
+<li> Product SKU: <li><input class="form-control"  readonly id='sku' type="text" name="name"></li></li>
   <br>
 
   <li> Product Name: <li><input class='form-control' id='name' type="text" name="name"></li></li>
@@ -29,11 +74,30 @@ include 'Functions.php';
 
   <li> Product Size: <li><input class='form-control' id='size' type="text" name="size"></li></li>
   
-  <li><input type="button" name="submit" value="Submit"></li>  
+  </div>
+  <li><input type="submit" name="submit" value="Submit"></li>  
 </ul>
 </form>
-</div>
 
+<span id='userInput'>
+<?php
+echo "<h2>Your Input:</h2>";
+echo $sku;
+echo "<br>";
+echo $name;
+echo "<br>";
+echo $desc;
+echo "<br>";
+echo $price;
+echo "<br>";
+echo $size;
+echo "<br>";
+
+
+$sql = "{$sku},{$name},{$desc},{$price},{$size}";
+echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
+?>
+</span>
 
 
 <span id='userInput'>
@@ -41,8 +105,8 @@ include 'Functions.php';
 </span>
 
 <form action=''>
-        <label for='fname'>Are you ready to submit?</label>
-        <input type='button' value ='Submit' id='' name='Submit' onclick="">
+        <label for='fname'>Are you ready to submit changes?</label>
+        <input type='button' value ='Submit' id='' name='Submit' onclick="updateMenuItem(document.getElementById('sql').innerHTML)">
 </form>
 <span id='returnBox'></span>
 </div>
@@ -53,7 +117,7 @@ include 'Functions.php';
 <ul>
   
   <li> Search Item Number : </li><li><input type="text" name="searchId" id='searchId'></li> 
-  <li><input type="button" name="submit" value="Search" onclick ="searchItemById(getElementById('searchId').value)"></li> 
+  <li><input type="button" name="submit" value="Search" onclick ="searchItemById(document.getElementById('searchId').value)"></li> 
 
   <li> Search Item Name :  </li><li><input  type="text" name="searchName"></li>
 <li><input type="button" name="submit" value="Search" onclick = 'searchItemByName("")'></li>  
@@ -69,6 +133,8 @@ include 'Functions.php';
 </div>
 
 </body>
+
+
 
 <script>
 
@@ -105,6 +171,18 @@ include 'Functions.php';
       }
     };
     xmlhttp.open("GET", "returnItemDetails.php?q=" + str, true);
+    xmlhttp.send();
+  }
+
+
+  function updateMenuItem(str) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("returnBox").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "updateMenuItem.php?q=" + str, true);
     xmlhttp.send();
   }
 
