@@ -188,7 +188,7 @@ echo "<span style = 'opacity: 0;' id='sql' name=''>{$sql}</span>";
         document.getElementById("returnBox").innerHTML = this.responseText;
       }
     };
-    xmlhttp.open("GET", "returnItemDetails.php?q=" + string, true);
+    xmlhttp.open("GET", "returnItemDetails.php?q=" + str, true);
     xmlhttp.send();
   }
 
