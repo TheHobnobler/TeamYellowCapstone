@@ -38,7 +38,7 @@ function navbar($title) {
         <a class="nav-link" href="AddMenuItemPage.php">Add Menu Item</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="EditMenu.php">Edit Menu</a>
+        <a class="nav-link" href="EditMenu.php">Add Menu Item</a>
       </li>
     </ul>
   </div>
@@ -64,15 +64,30 @@ function createMenuTable($array){
   if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-      echo 
-      "<tr><td>".$row["ITEM"].":&emsp;&emsp;</td><td> Size:&emsp;".$row["SIZE"]."&emsp;&emsp;</td><td> Price:&emsp;$".$row["PRICE"]."&emsp;</td>
+      echo "
+      <tr><td>" .$row['ITEM']. ":&emsp;&emsp;</td><td> Size:&emsp;" .$row['SIZE']." &emsp;&emsp;</td><td> Price:&emsp;$" .$row['PRICE']. " &emsp;</td>
               <td>
               <form action=''>
               <label for='fname'></label>
-              <input type='button' value ='Add To Cart' id='' name='".$row["SKU"]."' onclick='getButtonName(this.name)'>
+              <input type='button' value ='Add To Cart' id='' name='" .$row['SKU']. "' onclick='getButtonName(this.name)'>
             </form>
               </td>
+              <td>
+              <div class='form-floating'>
+      <select class='form-select'  id='returnList' name='returnList'>
+
+    
+      <option>No creamer</option>
+      <option>Skim</option>
+      <option>2%</option>
+      <option>Whole</option>
+      <option>Almond</option>
+
+
+      </select>
+              </td
           </tr>";
+          
     }
   } else {
     echo "0 results";
