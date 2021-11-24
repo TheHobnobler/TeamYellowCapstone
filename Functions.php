@@ -73,7 +73,7 @@ function createMenuTable($array){
             </form>
               </td>
               <td>
-              <div class='form-floating'>
+              <div>
       <select class='form-select'  id='returnList' name='returnList'>
 
     
@@ -81,6 +81,7 @@ function createMenuTable($array){
       <option>Skim</option>
       <option>2%</option>
       <option>Whole</option>
+      <option>Soy</option>
       <option>Almond</option>
 
 
