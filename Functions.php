@@ -67,7 +67,7 @@ function createMenuTable($array){
       echo "
       <tr><td>" .$row['ITEM']. ":&emsp;&emsp;</td><td> Size:&emsp;" .$row['SIZE']." &emsp;&emsp;</td><td> Price:&emsp;$" .$row['PRICE']. " &emsp;</td>
       <td>
-      <select class='form-select'  id='returnList' name='returnList'>
+      <select   id='returnList' name='returnList'>
 
     
       <option>No creamer</option>
