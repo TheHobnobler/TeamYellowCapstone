@@ -66,13 +66,7 @@ function createMenuTable($array){
     while($row = $result->fetch_assoc()) {
       echo "
       <tr><td>" .$row['ITEM']. ":&emsp;&emsp;</td><td> Size:&emsp;" .$row['SIZE']." &emsp;&emsp;</td><td> Price:&emsp;$" .$row['PRICE']. " &emsp;</td>
-              <td>
-              <form action=''>
-              <label for='fname'></label>
-              <input type='button' value ='Add To Cart' id='' name='" .$row['SKU']. "' onclick='getButtonName(this.name)'>
-            </form>
-              </td>
-              <td>
+      <td>
               <div>
       <select class='form-select'  id='returnList' name='returnList'>
 
@@ -87,6 +81,13 @@ function createMenuTable($array){
 
       </select>
               </td
+              <td>
+              <form action=''>
+              <label for='fname'></label>
+              <input type='button' value ='Add To Cart' id='' name='" .$row['SKU']. "' onclick='getButtonName(this.name)'>
+            </form>
+              </td>
+              
           </tr>";
           
     }
