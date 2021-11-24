@@ -79,7 +79,7 @@ function createMenuTable($array){
 
 
       </select>
-              </td
+              </td>
               <td>
               <form action=''>
               <label for='fname'></label>
