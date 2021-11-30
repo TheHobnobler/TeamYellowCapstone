@@ -35,7 +35,7 @@ foreach($_SESSION["cart"] as &$value){
   $password = "teamyellow";
   $dbname = "coffeeshop";
 
-  $sql = "select sku, item, description, price, size from menu_tbl where sku = '{$q}'; "; 
+  $sql = "select sku, item, description, price, size from menu_tbl where sku = '{$value["id"]}'; "; 
   
   $conn = mysqli_connect($servername, $username, $password, $dbname);
 
