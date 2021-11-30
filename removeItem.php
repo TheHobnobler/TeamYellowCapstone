@@ -27,27 +27,52 @@ foreach($_SESSION["cart"] as &$value){
 
 echo "<table>";
 foreach($_SESSION["cart"] as &$value){
-  $subtotal = ($value["qty"] * $_SESSION["coffee"][$value["id"]]["cost"]);
+
+  $servername =  "localhost";
+  $username  = "root";
+  $password = "teamyellow";
+  $dbname = "coffeeshop";
+
+  $sql = "select sku, item, description, price, size from menu_tbl where sku = '{$value["id"]}'; "; 
+  
+  $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+
+  $result = $conn->query($sql);
+  
+  if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {   
+
+  $subtotal = ($value["qty"] * $row["price"]);
 
   if($value["qty"] > 0){
- echo "<tr><td> {$_SESSION["coffee"][$value["id"]]["size"]}  {$_SESSION["coffee"][$value["id"]]["item"]} x{$value["qty"]} $".$subtotal. "</td>
+ echo "<tr><td> {$row["size"]}  {$row["item"]} x{$value["qty"]} $".$subtotal. "</td>
             <td>
             <form action=''>
             <label for='fname'></label>
-            <input type='button' value ='Remove Item' id='' name='".$value["id"]."' onclick='removeItem(this.name)'>
+            <input type='button' value ='Remove Item' id='' name=' {$value["id"]}' onclick='removeItem(this.name)'>
           </form>
 
             </td>
         </tr>";
 
         $total += $subtotal;
+
 }
+    }
+  }
 }
 echo "</table>";
 
-echo "<h4>You have {$count} item(s) in your cart.</h4><h4>Total $ {$total}";
+echo "<h4>You have {$count} item(s) in your cart.</h4><h4>Total $ {$total}<br>";
 
 
 
+
+$conn->close();
 
 ?>
