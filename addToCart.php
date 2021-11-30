@@ -65,16 +65,16 @@ foreach($_SESSION["cart"] as &$value){
         $total += $subtotal;
 
 }
+    }
+  }
+}
 echo "</table>";
 
 echo "<h4>You have {$count} item(s) in your cart.</h4><h4>Total $ {$total}";
-}
 
-} else {
-  echo "<option> No results</option>";
-}
+
 
 $conn->close();
 
-}
+
 
