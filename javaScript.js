@@ -1,4 +1,5 @@
 function getButtonName(str) {
+var string = document.getElementById("Creamer").value;
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -6,6 +7,7 @@ function getButtonName(str) {
     }
   };
   xmlhttp.open("GET", "addToCart.php?q=" + str, true);
+  xmlhttp.open("GET", "addToCart.php?p=" + string, true);
   xmlhttp.send();
 }
 
