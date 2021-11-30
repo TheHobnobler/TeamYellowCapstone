@@ -4,8 +4,9 @@ session_start();
 
 // get the q parameter from URL
 $q = $_REQUEST["q"];
+$p = $_REQUEST["p"];
 $total = 0;
-
+echo $p;
 
 $found = false;
 
