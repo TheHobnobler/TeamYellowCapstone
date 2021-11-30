@@ -67,16 +67,14 @@ function createMenuTable($array){
       echo "
       <tr><td>" .$row['ITEM']. ":&emsp;&emsp;</td><td> Size:&emsp;" .$row['SIZE']." &emsp;&emsp;</td><td> Price:&emsp;$" .$row['PRICE']. " &emsp;</td>
       <td>
-      <select   id='returnList' name='returnList'>
+      <select   id='creamer' name='returnList'>
 
-    
-      <option>No creamer</option>
-      <option>Skim</option>
-      <option>2%</option>
-      <option>Whole</option>
-      <option>Soy</option>
-      <option>Almond</option>
-
+      <option value = 'No Creamer'>No creamer</option>
+      <option value = 'Skim'>Skim</option>
+      <option value = '2%'>2%</option>
+      <option value = 'Whole'>Whole</option>
+      <option value = 'Soy'>Soy</option>
+      <option value = 'Almond'>Almond</option>
 
       </select>
               </td>
