@@ -6,9 +6,7 @@ session_start();
 $q = $_REQUEST["q"];
 $p = $_REQUEST["p"];
 $total = 0;
-echo $p;
-echo $q;
-echo "TESTETSTETSTETSTETST";
+
 $found = false;
 
 
@@ -73,6 +71,9 @@ foreach($_SESSION["cart"] as &$value){
 echo "</table>";
 
 echo "<h4>You have {$count} item(s) in your cart.</h4><h4>Total $ {$total}";
+echo $p;
+echo $q;
+echo "TESTETSTETSTETSTETST";
 
 
 
