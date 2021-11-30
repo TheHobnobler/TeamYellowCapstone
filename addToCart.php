@@ -70,7 +70,7 @@ foreach($_SESSION["cart"] as &$value){
 }
 echo "</table>";
 
-echo "<h4>You have {$count} item(s) in your cart.</h4><h4>Total $ {$total}";
+echo "<h4>You have {$count} item(s) in your cart.</h4><h4>Total $ {$total}<br>";
 echo $p;
 echo $q;
 echo "TESTETSTETSTETSTETST";
