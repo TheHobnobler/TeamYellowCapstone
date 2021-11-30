@@ -7,7 +7,8 @@ $q = $_REQUEST["q"];
 $p = $_REQUEST["p"];
 $total = 0;
 echo $p;
-
+echo $q;
+echo "TESTETSTETSTETSTETST";
 $found = false;
 
 
