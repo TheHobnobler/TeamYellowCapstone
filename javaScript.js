@@ -1,5 +1,5 @@
 function getButtonName(str) {
-var string = "foo";
+str += ",foo";
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -7,7 +7,6 @@ var string = "foo";
     }
   };
   xmlhttp.open("GET", "addToCart.php?q=" + str, true);
-  xmlhttp.open("GET", "addToCart.php?p=" + string, true);
   xmlhttp.send();
 }
 
