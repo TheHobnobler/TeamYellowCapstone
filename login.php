@@ -31,7 +31,7 @@ include 'Functions.php';
 				if(password_verify($_POST['password'], $row['password'])){
 					//action after a successful login
 					$_SESSION['name'] = $_POST['username'];
-					
+					$_SESSION['loggedin'] = True;
 					$_SESSION['success'] = 'Welcome ' . $_SESSION['name'] . '!';
 					//unset our attempt
 					unset($_SESSION['attempt']);
