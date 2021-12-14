@@ -5,7 +5,7 @@ include 'Functions.php';
 
 <div class="container">
     <h1>Welcome to Love You a Latte</h1>
-    <p>This is a work in progress for a home landing page.</p>
+    <p>Thanks for visiting our site.</p>
 </div>
 
 </body>
